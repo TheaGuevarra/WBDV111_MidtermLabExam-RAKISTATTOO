@@ -46,3 +46,9 @@ const navMenu = document.querySelector('nav ul')
 hamburger.addEventListener('click', () => {
     navMenu.classList.toggle('open')
 })
+
+document.addEventListener('click', (e) => {
+    if (!navMenu.contains(e.target) && !hamburger.contains(e.target)) {
+        navMenu.classList.remove('open')
+    }
+})

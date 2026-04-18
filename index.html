@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rakistattoo</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
-    <link href="https://jsdelivr.net" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Fascinate&family=Permanent+Marker&family=Rubik+Marker+Hatch&family=Special+Elite&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     
 </head>
@@ -16,34 +16,39 @@
         
     <header>
         <div class="brand">
-            <a href="index.html" class="font-header">Rakistattoo & Body Piercing</a>
+            <a href="index.html">
+                <img src="/images/brand.svg">
+            </a>
         </div>
-        <nav>
-            <ul class="navigation font-regular">
-                <li>
-                    <a href="about.html"><span>About</span></a>
-                </li>
-                <li>
-                    <a href="services.html"><span>Services</span></a>
-                </li>
-                <li>
-                    <a href="gallery.html"><span>Gallery</span></a>
-                </li>
-                <li>
-                    <a href="contact.html"><span>Contact</span></a>
-                </li>
+        <nav class="navigation">
+            <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
+
+        <button class="hamburger">
+            <i class="bi bi-list"></i>
+        </button>
+
         </nav>
     </header>
+
+    <hr>
 
     <main>
 
         <section class="hero">
-            <h1>We keep it exquisite</h1>
+            <h1>We keep it 
+                <span class="cycle-word">
+                    exquisite.
+                </span>
+                </h1>
             <div class="hero-text">
             <p>Clean work, honest art, and good energy.</p>
             <p>Whether it's your first piece or your next, we'll make sure it's done with care and precision.</p>
-            <a href="contact.html" class="cta-button">Make It Happen</a>
+            <a href="contact.html" class="cta-button">Let's Make It Happen</a>
             </div>
         
             <img src="/images/full-res/about-us-2.jpg">
@@ -55,7 +60,7 @@
                 <p>We'll sketch something unique just for you.</p>
             </div>
              <div class="feature-card">
-                <p class="emphasized">Chat with us online —</p>
+                <p class="emphasized">Chat with us online!</p>
                 <p>It's quick, easy, and we'll get back to you fast. Walk-ins always welcome.</p>
             </div>
              <div class="feature-card">
@@ -87,6 +92,7 @@
                 <img src="images/thumbnails/tattoo-thmb-7.webp" aria-hidden="true">
                 <img src="images/thumbnails/tattoo-thmb-5.webp" aria-hidden="true">
             </div>
+            <a href="contact.html" class="gallery-button">Go To Gallery</a>
         </section>
         
     </main>
@@ -119,7 +125,6 @@
     </footer>
 
     <script src="js/script.js"></script>
-    <script src="https://jsdelivr.net"></script>
   </body>
 </body>
 </html>
