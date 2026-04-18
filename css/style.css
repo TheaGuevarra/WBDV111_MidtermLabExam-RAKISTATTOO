@@ -36,10 +36,6 @@
 }
 
 body {
-    background-image: url('images/bg-texture.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
     background-color: #080607;
     margin: auto 0;
 }
@@ -51,10 +47,12 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('images/photo-wall-texture-pattern.jpg');
+    background-image: url('/images/bg-texture.jpg');
     background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     z-index: -1;
-    filter: brightness(0.1) opacity(0.5) blur(3px);
+    filter: brightness(0.8) opacity(0.5) contrast(150%);
 }
 
 main {
@@ -86,7 +84,7 @@ hr {
     font-size: clamp(1rem, 5vh, 3.75rem);
     color: #F8F9F7;
     padding: 0;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 .font-regular, p {
@@ -224,17 +222,17 @@ nav ul li a.active::after {
 }
 
 .hero h1 {
-    font-size: clamp(3rem, 5vw, 5.5rem);
+    font-size: clamp(3rem, 4vw, 5.5rem);
     color: #080607;
     -webkit-text-stroke: 0.1px rgba(0, 0, 0, 0.8);
-    text-align: center;
+    text-align: left;
     position: relative;
-    white-space: nowrap;
+    padding: 10px;
+    margin: 0 0 1rem;
     z-index: 2;
 }
 
 .hero p {
-    max-width: 95%;
     position: relative;
     z-index: 2;
     font-size: clamp(1.3rem, 2.5vw, 1.7rem);
@@ -242,7 +240,7 @@ nav ul li a.active::after {
     text-align: justify;
     line-height: 1.4rem;
     padding: 10px;
-    margin: 0 auto 1rem;
+    margin: 0 0 1rem;
 }
 
 .hero img {
@@ -394,12 +392,17 @@ nav ul li a.active::after {
     grid-template-columns: 1fr 1fr;
     gap: 20px;
     align-items: stretch;
-    min-height: clamp(400px, 50vw, 650px);
-    padding: 2rem 0;
+    height: 90vh;
+    padding: 0.5rem 0;
+}
+
+.about h1 {
+    padding: 0.5rem 0;
 }
 
 .about-image-main {
     height: 100%;
+    min-height: 0;
 }
 
 .about-image-main img {
@@ -413,6 +416,11 @@ nav ul li a.active::after {
     display: grid;
     grid-template-rows: 1fr 1fr;
     gap: 20px;
+    min-height: 0;
+}
+
+.about-accent-images {
+    min-height: 0;
 }
 
 .about-accent-images img {
@@ -420,6 +428,8 @@ nav ul li a.active::after {
     height: 100%;
     object-fit: cover;
     border-radius: 8px;
+    object-position: center 60%;
+    filter:grayscale(30%) hue-rotate(-5deg);
 }
 
 .about-text p {
@@ -513,9 +523,16 @@ tr:hover td:first-child {
     margin: 1.5rem 0;
 }
 
-.grid img {
+.gallery-item {
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+}
+
+.gallery-item img {
     width: 100%;
     height: 100%;
+    object-fit: cover;
+    object-position: center;
     cursor: pointer;
 }
 
@@ -633,9 +650,11 @@ address {
 footer {
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
     color: #F8F9F7;
-    margin: 0.5rem 1rem;
+    padding: 1.5rem 5%;
+    margin-top: 2rem;
+    border-top: 1px solid rgba(248, 249, 247, 0.15);
 }
 
 .footer-socials {
@@ -644,17 +663,35 @@ footer {
     gap: 15px;
 }
 
+.footer-socials__label {
+    font-family: "Special Gothic Expanded One", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    font-size: 0.75rem;
+    opacity: 0.6;
+}
+
 footer ul {
     list-style: none;
     display: flex;
-    gap: 10px;
+    gap: 15px;
+}
+
+footer ul li a i {
+    font-size: 1.2rem;
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+}
+
+footer ul li a:hover i {
+    opacity: 1;
 }
 
 .footer-copyright {
+    font-family: "Montserrat", sans-serif;
     font-size: 0.7rem;
-    opacity: 0.5;
+    opacity: 0.4;
 }
-
 
 /* ============================================================
    12. MEDIA QUERIES
@@ -708,7 +745,12 @@ footer ul {
 
     .hero h1 {
         white-space: normal;
-        font-size: clamp(1.8rem, 6vw, 3rem);
+        font-size: clamp(1.8rem, 7vw, 5rem);
+        margin: 0;
+    }
+
+    .hero p {
+        margin: 0;
     }
 
     .hero img {
@@ -717,6 +759,20 @@ footer ul {
 
     .about {
         grid-template-columns: 1fr;
+    }
+
+    .about {
+        height: auto;
+        min-height: 0;
+    }
+
+    .about-text p {
+        font-size: clamp(0.5rem, 2.5vw, 0.85rem);
+        line-height: 1.4;
+    }
+
+    .emphasized {
+        font-size: clamp(0.6rem, 3vw, 1rem);
     }
 
     .about-side-container {
@@ -743,5 +799,40 @@ footer ul {
     .contact-hours {
         border-bottom: none;
         padding-bottom: 0;
+    }
+}
+
+@media (min-width: 768px) {
+    .services-pricetables h2 {
+        font-size: clamp(1rem, 2vw, 1.5rem);
+    }
+
+    th {
+        font-size: clamp(0.7rem, 1vw, 1rem);
+    }
+
+    td {
+        font-size: clamp(0.8rem, 1.2vw, 1.1rem);
+    }
+
+    .services-pricetables {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        align-items: stretch;
+    }
+
+    .services-pricetables h1,
+    .services-pricetables h2 {
+        grid-column: 1 / -1;
+    }
+
+    .table-group {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .table-group table {
+        flex: 1;
     }
 }
