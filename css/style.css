@@ -607,6 +607,12 @@ tr:hover td:first-child {
     padding: 2rem;
 }
 
+.contact-methods li a {
+    text-align: justify;
+    text-decoration: none;
+    color: #F8F9F7;
+}
+
 .map-embed {
     padding: 1rem;
     border: 2px solid #F8F9F7;
