@@ -27,3 +27,7 @@ A static website for Rakistattoo & Body Piercing, a tattoo and piercing shop loc
 - `services.html` — Price guide
 - `gallery.html` — Photo gallery
 - `contact.html` — Contact and location.
+
+## Live Site Link
+
+https://theaguevarra.github.io/WBDV111_MidtermLabExam-RAKISTATTOO/
