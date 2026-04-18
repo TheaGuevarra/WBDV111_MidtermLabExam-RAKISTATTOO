@@ -22,33 +22,37 @@ lightbox.addEventListener('click', e => {
 })
 
 const word = document.querySelector('.hero h1 .cycle-word')
-const fonts = [
-    'Fascinate',
-    'Permanent Marker', 
-    'Rubik Marker Hatch',
-    'Special Elite',
-    'Abril Fatface',
-    'Special Gothic Expanded One'
-]
+if (word) {
+    const fonts = [
+        'Fascinate',
+        'Permanent Marker', 
+        'Rubik Marker Hatch',
+        'Special Elite',
+        'Abril Fatface',
+        'Special Gothic Expanded One'
+    ]
+    let i = 0
+    const interval = setInterval(() => {
+        word.style.fontFamily = `'${fonts[i]}', sans-serif`
+        i++
+        if (i >= fonts.length) {
+            clearInterval(interval)
+        }
+    }, 350)
+}
 
-let i = 0
-const interval = setInterval(() => {
-    word.style.fontFamily = `'${fonts[i]}', sans-serif`
-    i++
-    if (i >= fonts.length) {
-        clearInterval(interval)
-    }
-}, 350)
 
 const hamburger = document.querySelector('.hamburger')
 const navMenu = document.querySelector('nav ul')
 
-hamburger.addEventListener('click', () => {
-    navMenu.classList.toggle('open')
-})
+if (hamburger) {
+    hamburger.addEventListener('click', () => {
+        navMenu.classList.toggle('open')
+    })
 
-document.addEventListener('click', (e) => {
-    if (!navMenu.contains(e.target) && !hamburger.contains(e.target)) {
-        navMenu.classList.remove('open')
-    }
-})
+    document.addEventListener('click', (e) => {
+        if (!navMenu.contains(e.target) && !hamburger.contains(e.target)) {
+            navMenu.classList.remove('open')
+        }
+    })
+}
