@@ -706,6 +706,11 @@ footer ul {
         display: none;
     }
 
+    .hero h1 {
+        white-space: normal;
+        font-size: clamp(1.8rem, 6vw, 3rem);
+    }
+
     .hero img {
         object-position: 30% 40%;
     }
