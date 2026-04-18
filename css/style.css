@@ -57,6 +57,7 @@ body::before {
 
 main {
     padding: 2rem 5%;
+    overflow-x: hidden;
 }
 
 hr {
@@ -204,6 +205,7 @@ nav ul li a.active::after {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    border-radius: 2px;
     gap: 20px;
     width: 100%;
     padding: 0 10%;
@@ -305,11 +307,20 @@ nav ul li a.active::after {
     background: #F8F9F7;
     padding: 2rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+    opacity: 0;
+    transform: translateX(80px);
+    transition: opacity 1.2s ease, transform 0.6s ease;
+}
+
+.feature-card.visible {
+    opacity: 1;
+    transform: translateX(0);
 }
 
 .feature-card:nth-child(1) { background: #F8F9F7; }
-.feature-card:nth-child(2) { background: #f1ece8; }
-.feature-card:nth-child(3) { background: rgb(237, 234, 225); }
+.feature-card:nth-child(2) { background: #EDEEE9; }
+.feature-card:nth-child(3) { background: #D4D5D0  ; }
 
 .feature-card p {
     background: none;
@@ -326,8 +337,6 @@ nav ul li a.active::after {
     width: 100%;
     padding: 10px 0;
     margin: 0;
-    -webkit-mask-image: linear-gradient(to right, transparent, black 2%, black 98%, transparent);
-    mask-image: linear-gradient(to right, transparent, black 2%, black 98%, transparent);
 }
 
 .marquee p {
@@ -377,9 +386,8 @@ nav ul li a.active::after {
     text-decoration: none;
     text-align: center;
     display: block;
-    margin: 40px auto 30px;
-    width: 100%;
-    max-width: 95%;
+    margin: 40px auto 0px;
+    width: 80vw;
 }
 
 
@@ -520,7 +528,7 @@ tr:hover td:first-child {
     justify-content: center;
     align-content: center;
     grid-gap: clamp(6px, 1vw, 16px);
-    margin: 1.5rem 0;
+    margin: 1.5rem 0 0;
 }
 
 .gallery-item {
@@ -653,7 +661,7 @@ footer {
     align-items: center;
     color: #F8F9F7;
     padding: 1.5rem 5%;
-    margin-top: 2rem;
+    margin-top: 1.5rem;
     border-top: 1px solid rgba(248, 249, 247, 0.15);
 }
 
@@ -836,3 +844,4 @@ footer ul li a:hover i {
         flex: 1;
     }
 }
+
