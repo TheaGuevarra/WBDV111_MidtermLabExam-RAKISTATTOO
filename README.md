@@ -2,12 +2,15 @@
 
 Web Development 111 Project - Static Website
 
-CHIEFE, John Willy
-DE JUAN, Jamie Eliz
-GUEVARRA, Thea
-MURRILLO, Kristine Mae
+ BSIT 1-Y2-4
 
-BSIT 1-Y2-4
+- CHIEFE, John Willy
+
+- DE JUAN, Jamie Eliz
+
+- GUEVARRA, Thea
+
+- MURRILLO, Kristine Mae
 
 ## Project Description
 A static website for Rakistattoo & Body Piercing, a tattoo and piercing shop located at Ayala Malls Feliz, Pasig City.
