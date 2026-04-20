@@ -38,7 +38,7 @@ function playCycle() {
     if (intervalId) clearInterval(intervalId)
     let i = 0
     intervalId = setInterval(() => {
-        word.style.fontFamily = `'${fonts[i]}', sans-serif
+        word.style.fontFamily = `'${fonts[i]}', sans-serif`
         i++
         if (i >= fonts.length) clearInterval(intervalId)
     }, 500)
