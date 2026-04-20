@@ -51,7 +51,7 @@ function playCycle() {
         word.style.color = colors[i]
         i++
         if (i >= fonts.length) clearInterval(intervalId)
-    }, 350)
+    }, 500)
 }
 
 if (word) {
