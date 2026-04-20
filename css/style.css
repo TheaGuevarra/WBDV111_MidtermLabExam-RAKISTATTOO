@@ -342,7 +342,7 @@ nav ul li a.active::after {
 
 .feature-number {
     position:absolute;
-    top: -0.2rem;
+    top: -0.1rem;
     right: 1rem;
     font-family: 'Bebas Neue', sans-serif;
     font-size: clamp(5rem, 10vw, 8rem);
