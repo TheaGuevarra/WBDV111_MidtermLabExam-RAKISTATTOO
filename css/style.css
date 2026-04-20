@@ -685,10 +685,12 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 0.75rem;
     color: #F8F9F7;
     padding: 1.5rem 5%;
     margin-top: 1.5rem;
     border-top: 1px solid rgba(248, 249, 247, 0.15);
+    text-align: center;
 }
 
 .footer-socials {
@@ -869,6 +871,12 @@ footer ul li a:hover i {
 
     .table-group table {
         flex: 1;
+    }
+
+    footer {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
     }
 }
 
