@@ -342,7 +342,8 @@ nav ul li a.active::after {
 
 .feature-number {
     position:absolute;
-    top: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
     right: 1rem;
     font-family: 'Bebas Neue', sans-serif;
     font-size: clamp(5rem, 10vw, 8rem);
