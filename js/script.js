@@ -22,34 +22,35 @@ lightbox.addEventListener('click', e => {
 })
 
 const word = document.querySelector('.hero h1 .cycle-word')
-if (word) {
-    const fonts = [
-        'Fascinate',
-        'Permanent Marker', 
-        'Rubik Marker Hatch',
-        'Special Elite',
-        'Abril Fatface',
-        'Special Gothic Expanded One'
-    ]
-    const colors = [
-    '#6B2737', // deep burgundy
-    '#2C4A3E', // forest green
-    '#1E3A5F', // navy
-    '#5C3D2E', // warm brown
-    '#4A3728', // dark umber
-    '#080607'  // black (final)
-    ]
 
-    let intervalID = null
+const fonts = [
+    'Fascinate',
+    'Permanent Marker',
+    'Rubik Marker Hatch',
+    'Special Elite',
+    'Abril Fatface',
+    'Special Gothic Expanded One'
+]
 
+const colors = [
+    '#6B2737',
+    '#2C4A3E',
+    '#1E3A5F',
+    '#5C3D2E',
+    '#4A3728',
+    '#080607'
+]
+
+let intervalId = null
+
+function playCycle() {
+    if (intervalId) clearInterval(intervalId)
     let i = 0
-    const interval = setInterval(() => {
+    intervalId = setInterval(() => {
         word.style.fontFamily = `'${fonts[i]}', sans-serif`
-        word.style.color = colors [i]
+        word.style.color = colors[i]
         i++
-        if (i >= fonts.length) {
-            clearInterval(interval)
-        }
+        if (i >= fonts.length) clearInterval(intervalId)
     }, 350)
 }
 
