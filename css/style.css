@@ -19,7 +19,7 @@
 
 /* ============================================================
    1. VARIABLES & RESET
-============================================================ */
+   ============================================================ */
 
 :root {
     --bg-color: #F8F9F7;
@@ -66,18 +66,18 @@ hr {
 }
 
 .backdrop {
-    display: none;
     position: fixed;
     inset: 0;
     background: rgba(0, 0, 0, 0.4);
     z-index: 99;
     opacity: 0;
+    pointer-events: none;
     transition: opacity 0.3s ease;
 }
 
 .backdrop.visible {
-    display: block;
     opacity: 1;
+    pointer-events: auto;
 }
 
 
@@ -302,8 +302,14 @@ nav ul li a.active::after {
     text-align: center;
     display: block;
     margin: 30px auto;
-    width: 100%;
     max-width: 95%;
+}
+
+.cta-button:hover {
+    background: rgba(0, 0, 0, 0.85);
+    color: #fff;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.4);
+    border-color: rgba(0, 0, 0, 0.8);
 }
 
 
