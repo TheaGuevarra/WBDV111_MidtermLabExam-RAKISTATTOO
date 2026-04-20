@@ -31,14 +31,31 @@ if (word) {
         'Abril Fatface',
         'Special Gothic Expanded One'
     ]
+    const colors = [
+    '#6B2737', // deep burgundy
+    '#2C4A3E', // forest green
+    '#1E3A5F', // navy
+    '#5C3D2E', // warm brown
+    '#4A3728', // dark umber
+    '#080607'  // black (final)
+    ]
+
+    let intervalID = null
+
     let i = 0
     const interval = setInterval(() => {
         word.style.fontFamily = `'${fonts[i]}', sans-serif`
+        word.style.color = colors [i]
         i++
         if (i >= fonts.length) {
             clearInterval(interval)
         }
     }, 350)
+}
+
+if (word) {
+    playCycle()
+    word.closest('h1').addEventListener('mouseenter', playCycle)
 }
 
 
