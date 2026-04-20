@@ -408,6 +408,15 @@ nav ul li a.active::after {
     display: block;
     margin: 40px auto 0px;
     width: 80vw;
+    transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.gallery-button::hover {
+    .gallery-button:hover {
+    background: #F8F9F7;
+    color: #080607;
+    border-color: #F8F9F7;
+}
 }
 
 
