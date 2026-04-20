@@ -65,10 +65,25 @@ hr {
     margin: 0;
 }
 
+.backdrop {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 99;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.backdrop.visible {
+    display: block;
+    opacity: 1;
+}
+
 
 /* ============================================================
    2. TYPOGRAPHY
-============================================================ */
+   ============================================================ */
 
 .font-header {
     font-family: "Bebas Neue", sans-serif;

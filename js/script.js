@@ -44,10 +44,21 @@ if (word) {
 
 const hamburger = document.querySelector('.hamburger')
 const navMenu = document.querySelector('nav ul')
+const backdrop = document.querySelector('.backdrop')
+
+function openNav() {
+    navMenu.classList.add('open');
+    backdrop.classList.add('visible')
+}
+
+function closeNav () {
+    navMenu.classList.remove('open')
+    backdrop.classList.remove('visible')
+}
 
 if (hamburger) {
     hamburger.addEventListener('click', () => {
-        navMenu.classList.toggle('open')
+        navMenu.classList.contains('open') ? closeNav () : openNav()
     })
 
     document.addEventListener('click', (e) => {
