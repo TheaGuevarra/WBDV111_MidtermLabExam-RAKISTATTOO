@@ -1,6 +1,6 @@
 /* ============================================================
    RAKISTATTOO — Main Stylesheet
-  ============================================================
+   ============================================================
    TABLE OF CONTENTS
    1. Variables & Reset
    2. Typography
@@ -780,6 +780,7 @@ footer ul li a:hover i {
 
     .hero h1 {
         white-space: normal;
+        text-align: center;
         font-size: clamp(1.8rem, 7vw, 5rem);
         margin: 0;
     }
