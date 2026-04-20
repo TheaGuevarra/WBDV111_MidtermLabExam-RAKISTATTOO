@@ -32,23 +32,13 @@ const fonts = [
     'Special Gothic Expanded One'
 ]
 
-const colors = [
-    '#4A4A6A',
-    '#3D5A4A',
-    '#5A3D4A',
-    '#4A5A6A',
-    '#3D3D4A',
-    '#080607'
-]
-
 let intervalId = null
 
 function playCycle() {
     if (intervalId) clearInterval(intervalId)
     let i = 0
     intervalId = setInterval(() => {
-        word.style.fontFamily = `'${fonts[i]}', sans-serif`
-        word.style.color = colors[i]
+        word.style.fontFamily = `'${fonts[i]}', sans-serif
         i++
         if (i >= fonts.length) clearInterval(intervalId)
     }, 500)
