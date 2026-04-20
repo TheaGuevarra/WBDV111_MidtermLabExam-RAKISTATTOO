@@ -63,7 +63,7 @@ if (hamburger) {
 
     document.addEventListener('click', (e) => {
         if (!navMenu.contains(e.target) && !hamburger.contains(e.target)) {
-            navMenu.classList.remove('open')
+            closeNav()
         }
     })
 }
