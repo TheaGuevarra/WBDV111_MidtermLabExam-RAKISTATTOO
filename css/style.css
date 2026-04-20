@@ -241,7 +241,6 @@ nav ul li a.active::after {
 .hero h1 {
     font-size: clamp(3rem, 4vw, 5.5rem);
     color: #080607;
-    -webkit-text-stroke: 0.1px rgba(0, 0, 0, 0.8);
     position: relative;
     padding: 10px;
     margin: 0 0 1rem;
@@ -302,6 +301,7 @@ nav ul li a.active::after {
     display: block;
     margin: 30px auto;
     max-width: 95%;
+    transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
 .cta-button:hover {
