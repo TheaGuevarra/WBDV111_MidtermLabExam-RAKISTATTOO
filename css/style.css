@@ -59,11 +59,6 @@ main {
     overflow-x: hidden;
 }
 
-header hr {
-    color: #F8F9F7;
-    margin: 0;
-}
-
 .backdrop {
     position: fixed;
     inset: 0;
@@ -139,6 +134,15 @@ header a {
     margin: 0;
     text-decoration: none;
     color: inherit;
+}
+
+header hr {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    border-color: rgba(248, 249, 247, 0.3);
 }
 
 .brand {
