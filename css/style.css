@@ -125,7 +125,9 @@ a i {
    ============================================================ */
 
 header {
-    position: relative;
+    position: sticky;
+    top: 0;
+    z-index: 998;
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
