@@ -824,7 +824,7 @@ footer ul li a:hover i {
         padding: 5.5rem 2rem;
         transition: right 0.3s ease;
         display: flex;
-        z-index: 1000;
+        z-index: 1001;
     }
 
     nav ul.open {
