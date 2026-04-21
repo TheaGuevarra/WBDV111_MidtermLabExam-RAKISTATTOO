@@ -25,7 +25,6 @@
     --bg-color: #F8F9F7;
     --text-main: #3E3A41;
     --ink-black: #080607;
-    --accent-gold: #BEB376;
     --muted-gray: #7B7A7E;
 }
 
@@ -182,10 +181,6 @@ nav ul li a {
     position: relative;
     padding-bottom: 0.5rem;
     line-height: 1;
-}
-
-nav ul li a span {
-    display: inline-block;
 }
 
 nav ul li a::after {
