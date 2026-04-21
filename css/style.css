@@ -814,7 +814,7 @@ footer ul li a:hover i {
         background: #080607;
         flex-direction: column;
         gap: 2rem;
-        padding: 5rem 2rem;
+        padding: 8rem 2rem 5rem;
         transition: right 0.3s ease;
         display: flex;
         z-index: 1000;
