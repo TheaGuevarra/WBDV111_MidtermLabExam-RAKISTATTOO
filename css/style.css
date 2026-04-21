@@ -812,6 +812,7 @@ footer ul li a:hover i {
         width: 70%;
         height: 100vh;
         background: #080607;
+        border-right: 2px solid rgba(248, 249, 247, 0.15);
         flex-direction: column;
         gap: 2rem;
         padding: 5.5rem 2rem;
@@ -822,6 +823,22 @@ footer ul li a:hover i {
 
     nav ul.open {
         right: 0;
+    }
+
+    .nav-label {
+        display: none;
+    }
+
+    nav ul.open .nav-label {
+        display: block;
+        font-family: "Special Gothic Expanded One", sans-serif;
+        font-size: 0.6rem;
+        letter-spacing: 0.3rem;
+        opacity: 0.3;
+        text-transform: uppercase;
+        border-bottom: none !important;
+        padding-bottom: 0 !important;
+        margin-bottom: -0.5rem;
     }
 
     nav ul li a {
