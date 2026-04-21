@@ -812,7 +812,7 @@ footer ul li a:hover i {
         width: 70%;
         height: 100vh;
         background: #080607;
-        border-left: 2px solid rgba(248, 249, 247, 0.15);
+        border-left: 2px solid rgba(248, 249, 247);
         flex-direction: column;
         gap: 2rem;
         padding: 5.5rem 2rem;
