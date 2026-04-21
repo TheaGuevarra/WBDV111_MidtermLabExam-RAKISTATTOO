@@ -812,7 +812,7 @@ footer ul li a:hover i {
         width: 70%;
         height: 100vh;
         background: #080607;
-        border-left: 2px solid rgba(248, 249, 247);
+        border-left: 2px solid rgba(248, 249, 247, 0.5);
         flex-direction: column;
         gap: 2rem;
         padding: 5.5rem 2rem;
@@ -843,7 +843,7 @@ footer ul li a:hover i {
 
     nav ul li a {
         font-size: clamp(1.5rem, 4vw, 2.5rem);
-        opacity: 0.4;
+        opacity: 0.5;
     }
 
     nav ul li {
@@ -865,7 +865,7 @@ footer ul li a:hover i {
     }
 
     nav ul.open li a.active::after {
-    display: none;
+        display: none;
     }
 
     .hero h1 {
