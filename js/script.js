@@ -1,3 +1,18 @@
+const galleryItems = document.querySelectorAll('.gallery-item')
+
+const itemObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+            setTimeout(() => {
+                entry.target.classList.add('visible')
+            }, index * 60)
+            itemObserver.unobserve(entry.target)
+        }
+    })
+}, { threshold: 0.1 })
+
+galleryItems.forEach(item => itemObserver.observe(item))
+
 const lightbox = document.createElement("div")
 lightbox.id = 'lightbox'
 document.body.appendChild(lightbox)
@@ -20,6 +35,8 @@ lightbox.addEventListener('click', e => {
     if (e.target !== e.currentTarget) return
     lightbox.classList.remove('active')
 })
+
+
 
 const word = document.querySelector('.hero h1 .cycle-word')
 
