@@ -845,7 +845,6 @@ footer ul li a:hover i {
     nav ul.open li a.active {
     background: rgba(248, 249, 247, 0.1);
     border-radius: 4px;
-    padding-left: 0.5rem;
     }
 
     nav ul.open li a.active::after {
