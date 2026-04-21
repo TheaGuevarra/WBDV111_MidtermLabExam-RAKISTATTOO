@@ -13,6 +13,7 @@ const itemObserver = new IntersectionObserver((entries) => {
 
 galleryItems.forEach(item => itemObserver.observe(item))
 
+
 const lightbox = document.createElement("div")
 lightbox.id = 'lightbox'
 document.body.appendChild(lightbox)
@@ -66,6 +67,13 @@ if (word) {
     word.closest('h1').addEventListener('mouseenter', playCycle)
 }
 
+const navLinks = document.querySelectorAll('nav ul li a')
+
+navLinks.forEach(link => {
+    if (link.href === window.location.href) {
+        link.classList.add('active')
+    }
+})
 
 const hamburger = document.querySelector('.hamburger')
 const navMenu = document.querySelector('nav ul')
