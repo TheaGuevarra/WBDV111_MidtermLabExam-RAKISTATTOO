@@ -200,6 +200,10 @@ nav ul li a.active::after {
     width: 100%;
 }
 
+.nav-label {
+        display: none;
+    }
+
 .hamburger {
     color: #F8F9F7;
     display: none;
@@ -818,10 +822,6 @@ footer ul li a:hover i {
 
     nav ul.open {
         right: 0;
-    }
-
-    .nav-label {
-        display: none;
     }
 
     nav ul.open .nav-label {
