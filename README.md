@@ -10,7 +10,7 @@ Web Development 111 Project - Static Website
 
 - GUEVARRA, Thea
 
-- MURRILLO, Kristine Mae
+- MURRILLO, Kristine
 
 ## Project Description
 A static website for Rakistattoo & Body Piercing, a tattoo and piercing shop located at Ayala Malls Feliz, Pasig City.
