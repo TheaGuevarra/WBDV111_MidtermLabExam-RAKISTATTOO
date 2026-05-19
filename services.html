@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="View Rakistattoo's full price list for permanent tattoos, ear and body piercings, and henna. Black & grey, colored, and minimalist styles available.">
     <title>Rakistattoo - Services</title>
-    <base href="/WBDV111_MidtermLabExam-RAKISTATTOO/">
     <link rel="icon" type="image/png" href="images/thumbnails/favicon.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="page-services">
         
     <header>
         <div class="brand">
@@ -38,19 +37,30 @@
 
 
     <main>
-        <section class="services-pricetables">
+ 
+        <!-- PAGE HEADER -->
+        <div class="services-header">
             <h1>Services</h1>
+            <p class="services-note">All prices are starting rates. Final pricing depends on design complexity, placement, and size. Free consultation available — walk-ins welcome.</p>
+        </div>
+    
+        <section class="services-body">
+    
+            <!-- PERMANENT TATTOOS -->
             <div class="table-group">
-                <h2>Permanent Tattoos</h2>
+                <div class="table-group-label">
+                    <h2>Permanent Tattoo</h2>
+                    <span class="table-group-sub">Black & Grey · Colored</span>
+                </div>
                 <table class="pricetable-tattoos">
                     <thead>
                         <tr>
-                            <th>Size/Style</th>
+                            <th>Size</th>
                             <th class="price">Black & Grey</th>
                             <th class="price">Colored</th>
                         </tr>
                     </thead>
-                        <tbody>
+                    <tbody>
                         <tr>
                             <td>Minimalist</td>
                             <td class="price">₱1,500</td>
@@ -61,216 +71,208 @@
                             <td class="price">₱2,000</td>
                             <td class="price">₱2,500</td>
                         </tr>
-                        <tr> 
-                            <td>Medium</td> 
-                            <td class="price">₱4,000</td> 
-                            <td class="price">₱5,500</td> 
+                        <tr>
+                            <td>Medium</td>
+                            <td class="price">₱4,000</td>
+                            <td class="price">₱5,500</td>
                         </tr>
-                        <tr> 
-                            <td>Large</td> 
-                            <td class="price">₱7,000</td> 
-                            <td class="price">₱9,000</td> 
+                        <tr>
+                            <td>Large</td>
+                            <td class="price">₱7,000</td>
+                            <td class="price">₱9,000</td>
                         </tr>
                         <tr>
                             <td>Half Sleeve</td>
                             <td class="price">₱18,000</td>
                             <td class="price">₱22,000</td>
                         </tr>
-                        <tr> 
-                            <td>Full Sleeve</td> 
-                            <td class="price">₱35,000</td> 
-                            <td class="price">₱45,000</td> 
+                        <tr>
+                            <td>Full Sleeve</td>
+                            <td class="price">₱35,000</td>
+                            <td class="price">₱45,000</td>
                         </tr>
-                        <tr> 
-                            <td>Back Piece</td> 
-                            <td class="price">₱40,000</td> 
-                            <td class="price">₱50,000</td> 
+                        <tr>
+                            <td>Back Piece</td>
+                            <td class="price">₱40,000</td>
+                            <td class="price">₱50,000</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
-
+    
+            <!-- PIERCINGS — 3-column grid -->
             <div class="table-group">
-                <h2>PIERCINGS — EAR</h2>
-                <table class="pricetable-piercings">
-                    <thead>
-                        <tr>
-                            <th>Placement</th>
-                            <th class="price">Price</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Earlobe</td>
-                            <td class="price">₱500</td>
-                        </tr>
-                        <tr>
-                            <td>Helix</td>
-                            <td class="price">₱600</td>
-                        </tr>
-                        <tr> 
-                            <td>Auricle</td> 
-                            <td class="price">₱600</td>
-                        </tr>
-                        <tr> 
-                            <td>Flat</td> 
-                            <td class="price">₱800</td> 
-                        </tr>
-                        <tr>
-                            <td>Conch</td>
-                            <td class="price">₱900</td>
-                        </tr>
-                        <tr>
-                            <td>Tragus</td>
-                            <td class="price">₱900</td>
-                        </tr>
-                        <tr>
-                            <td>Snug</td>
-                            <td class="price">₱900</td>
-                        </tr>
-                        <tr> 
-                            <td>Rook</td> 
-                            <td class="price">₱1,000</td> 
-                        </tr>
-                        <tr> 
-                            <td>Daith</td>
-                            <td class="price">₱1,000</td> 
-                        </tr>
-                        <tr> 
-                            <td>Forward Helix</td>
-                            <td class="price">₱1,000</td> 
-                        </tr>
-                        <tr> 
-                            <td>Industrial</td> 
-                            <td class="price">₱1,200</td> 
-                        </tr>
-                        <tr> 
-                            <td>Tunnel (10mm)</td> 
-                            <td class="price">₱1,500</td> 
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="table-group-label">
+                    <h2>Body Piercing</h2>
+                    <span class="table-group-sub">Ear · Facial · Body</span>
+                </div>
+                <div class="piercing-grid">
+    
+                    <!-- EAR -->
+                    <div class="piercing-grid-cell">
+                        <p class="piercing-cell-label">Ear</p>
+                        <table class="pricetable-piercings">
+                            <thead>
+                                <tr>
+                                    <th>Placement</th>
+                                    <th class="price">Price</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Earlobe</td><td class="price">₱500</td></tr>
+                                <tr><td>Helix</td><td class="price">₱600</td></tr>
+                                <tr><td>Auricle</td><td class="price">₱600</td></tr>
+                                <tr><td>Flat</td><td class="price">₱800</td></tr>
+                                <tr><td>Conch</td><td class="price">₱900</td></tr>
+                                <tr><td>Tragus</td><td class="price">₱900</td></tr>
+                                <tr><td>Snug</td><td class="price">₱900</td></tr>
+                                <tr><td>Rook</td><td class="price">₱1,000</td></tr>
+                                <tr><td>Daith</td><td class="price">₱1,000</td></tr>
+                                <tr><td>Forward Helix</td><td class="price">₱1,000</td></tr>
+                                <tr><td>Industrial</td><td class="price">₱1,200</td></tr>
+                                <tr><td>Tunnel (10mm)</td><td class="price">₱1,500</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+    
+                    <!-- FACIAL -->
+                    <div class="piercing-grid-cell">
+                        <p class="piercing-cell-label">Facial</p>
+                        <table class="pricetable-piercings">
+                            <thead>
+                                <tr>
+                                    <th>Placement</th>
+                                    <th class="price">Price</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Nostril</td><td class="price">₱500</td></tr>
+                                <tr><td>Septum</td><td class="price">₱1,200</td></tr>
+                                <tr><td>Eyebrow</td><td class="price">₱1,200</td></tr>
+                                <tr><td>Medusa</td><td class="price">₱1,200</td></tr>
+                                <tr><td>Ashley</td><td class="price">₱1,200</td></tr>
+                                <tr><td>Labret</td><td class="price">₱1,200</td></tr>
+                                <tr><td>Cheek</td><td class="price">₱1,200</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+    
+                    <!-- BODY -->
+                    <div class="piercing-grid-cell">
+                        <p class="piercing-cell-label">Body</p>
+                        <table class="pricetable-piercings">
+                            <thead>
+                                <tr>
+                                    <th>Placement</th>
+                                    <th class="price">Price</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Tongue</td><td class="price">₱1,200</td></tr>
+                                <tr><td>Navel</td><td class="price">₱1,200</td></tr>
+                                <tr><td>Nipple</td><td class="price">₱1,200</td></tr>
+                                <tr><td>Dermal</td><td class="price">₱2,000</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+    
+                </div>
             </div>
-
+    
+            <!-- HENNA -->
             <div class="table-group">
-                <h2>PIERCINGS — FACIAL</h2>
-                <table class="pricetable-piercings">
-                    <thead>
-                        <tr>
-                            <th>Placement</th>
-                            <th class="price">Price</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Nostril</td>
-                            <td class="price">₱500</td>
-                        </tr>
-                        <tr>
-                            <td>Septum</td>
-                            <td class="price">₱1,200</td>
-                        </tr>
-                        <tr> 
-                            <td>Eyebrow</td> 
-                            <td class="price">₱1,200</td>
-                        </tr>
-                        <tr> 
-                            <td>Medusa</td> 
-                            <td class="price">₱1,200</td> 
-                        </tr>
-                        <tr>
-                            <td>Ashley</td>
-                            <td class="price">₱1,200</td> 
-                        </tr>
-                        <tr>
-                            <td>Labret</td>
-                            <td class="price">₱1,200</td> 
-                        </tr>
-                        <tr>
-                            <td>Cheek</td>
-                            <td class="price">₱1,200</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="table-group-label">
+                    <h2>Henna</h2>
+                    <span class="table-group-sub">Temporary</span>
+                </div>
+                <div class="henna-row">
+                    <div class="henna-item">
+                        <p class="henna-size">3 × 3 in.</p>
+                        <p class="henna-price">₱150</p>
+                    </div>
+                    <div class="henna-item">
+                        <p class="henna-size">5 × 5 in.</p>
+                        <p class="henna-price">₱300</p>
+                    </div>
+                </div>
             </div>
-
-            <div class="table-group">
-                <h2>PIERCINGS — BODY</h2>
-                <table class="pricetable-piercings">
-                    <thead>
-                        <tr>
-                            <th>Placement</th>
-                            <th class="price">Price</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Tongue</td>
-                            <td class="price">₱1,200</td>
-                        </tr>
-                        <tr>
-                            <td>Navel</td>
-                            <td class="price">₱1,200</td>
-                        </tr>
-                        <tr> 
-                            <td>Nipple</td> 
-                            <td class="price">₱1,200</td>
-                        </tr>
-                        <tr>
-                            <td>Dermal</td>
-                            <td class="price">₱2,000</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <div class="table-group">
-                <h2>Henna</h2>
-                <table class="pricetable-henna">
-                    <thead>
-                        <tr>
-                            <th>Size</th>
-                            <th class="price">Price</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>3 &times; 3 in.</td>
-                            <td class="price">₱150</td>
-                        </tr>
-                        <tr>
-                            <td>5 &times; 5 in.</td>
-                            <td class="price">₱300</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+    
         </section>
+    
+        <p class="services-disclaimer">Prices are starting rates and may vary based on design complexity, placement, and artist time. A deposit may be required for custom or large-scale work. Age requirement: 18+ with valid ID. Walk-ins welcome — no appointment necessary for most services.</p>
+
     </main>
 
-    <footer>
-        <div class="footer-socials">
-            
-            <p class="footer-socials__label">Follow Us On:</p>
-            <ul class="footer-socials__list">
-                <li>
-                    <a href="https://www.facebook.com/rakistattoo/">
-                        <i class="bi bi-facebook"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.instagram.com/rakistattoo/">
-                        <i class="bi bi-instagram"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.tiktok.com/@rakistattoo">
-                        <i class="bi bi-tiktok"></i>
-                    </a>
-                </li>
-            </ul>
+    <footer class="site-footer">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <a href="index.html" class="footer-logo">
+                    <img src="images/full-res/logow.webp" alt="Rakistattoo & Body Piercing">
+                </a>
+                <img src="images/brand.svg" class="brand-svg" alt="Rakistattoo">
+                <div class="footer-socials">
+                    <ul>
+                        <li>
+                            <a href="https://www.facebook.com/rakistattoo/" aria-label="Facebook" target="_blank" rel="noopener">
+                                <i class="bi bi-facebook"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/rakistattoo/" aria-label="Instagram" target="_blank" rel="noopener">
+                                <i class="bi bi-instagram"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.tiktok.com/@rakistattoo" aria-label="TikTok" target="_blank" rel="noopener">
+                                <i class="bi bi-tiktok"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <p class="footer-col-label">Navigate</p>
+                <ul class="footer-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <p class="footer-col-label">Find Us</p>
+                <p class="footer-col-text">
+                    4th Floor Ayala Malls Feliz<br>
+                    Brgy. Dela Paz, Pasig City<br>
+                    Metro Manila, Philippines
+                </p>
+                <a class="footer-col-link"
+                    href="https://maps.google.com/?q=Ayala+Malls+Feliz+Pasig"
+                    target="_blank"
+                    rel="noopener">
+                    <i class="bi bi-box-arrow-up-right" style="font-size:0.7rem;"></i>
+                    Get Directions
+                </a>
+            </div>
+
+            <div class="footer-col">
+                <p class="footer-col-label">Hours</p>
+                <p class="footer-col-text">
+                    Mon – Fri<br>
+                    11:00 AM – 8:00 PM<br>
+                    <br>
+                    Sat – Sun<br>
+                    10:00 AM – 8:00 PM<br>
+                    <br>
+                </p>
+            </div>
         </div>
-        <div class="footer-copyright">
+
+        <hr>
+        <div class="footer-bottom">
             <p>&copy; 2026 Rakistattoo. All Rights Reserved.</p>
         </div>
     </footer>

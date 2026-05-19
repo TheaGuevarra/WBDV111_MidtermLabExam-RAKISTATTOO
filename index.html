@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Rakistattoo & Body Piercing — clean, quality tattoos and piercings since 2017. Located at 4th Floor Ayala Malls Feliz, Pasig City.">
     <title>Rakistattoo</title>
-    <base href="/WBDV111_MidtermLabExam-RAKISTATTOO/">
     <link rel="icon" type="image/png" href="images/thumbnails/favicon.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Fascinate&family=Permanent+Marker&family=Rubik+Marker+Hatch&family=Special+Elite&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="page-home">
         
     <header>
         <div class="brand">
@@ -30,61 +29,113 @@
                 <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
-        <button class="hamburger">
-            <i class="bi bi-list"></i>
-        </button>
+            <button class="hamburger">
+                <i class="bi bi-list"></i>
+            </button>
         </nav>
         <hr>
     </header>
 
-
     <main>
-
+        <!-- HERO -->
         <section class="hero">
-            <h1>We keep it 
-                <span class="cycle-word">
-                    exquisite.
-                </span>
+            <img class="hero-bg-img" src="images/full-res/cover.jpg" alt="Rakistattoo studio interior">
+            <div class="hero-left">
+                <p class="hero-eyebrow">Rakistattoo & Body Piercing</p>
+                <h1>
+                    <span class="no-wrap">We keep it</span>
+                    <span class="cycle-word">exquisite.</span>
                 </h1>
-            <div class="hero-text">
-            <p>Clean work, honest art, and good energy.</p>
-            <p>Whether it's your first piece or your next, we'll make sure it's done with care and precision.</p>
-            <a href="contact.html" class="cta-button">Let's Make It Happen.</a>
+                <p class="hero-tagline">Clean work, honest art, and good energy. Whether it's your first piece or your next, we'll make sure it's done with care and precision.</p>
+                <div class="hero-actions">
+                    <a href="contact.html#booking-form" class="hero-cta-primary">Book a Session</a>
+                    <a href="gallery.html" class="hero-cta-secondary">View Gallery</a>
+                </div>
             </div>
-        
-            <img src="images/full-res/about-us-2.jpg" alt="Rakistattoo studio interior">
-        </section>
-
-        <section class="features">
-            <div class="feature-card">
-                <span class="feature-number">01</span>
-                <p class="emphasized">Your idea, brought to life.</p>
-                <p>We'll sketch something unique just for you.</p>
-            </div>
-             <div class="feature-card">
-                <span class="feature-number">02</span>
-                <p class="emphasized">Chat with us online!</p>
-                <p>It's quick, easy, and we'll get back to you fast. Walk-ins always welcome.</p>
-            </div>
-             <div class="feature-card">
-                <span class="feature-number">03</span>
-                <p class="emphasized">Your safety is non-negotiable.</p>
-                <p>Single-use needles, fresh setup every time — and we'll walk you through aftercare so your work heals right.</p>
+            <div class="hero-right">
+                <img src="images/full-res/cover.jpg" alt="Rakistattoo studio interior">
             </div>
         </section>
 
+        <!-- TRUST BAR -->
+        <div class="trust-bar">
+            <div class="trust-item">
+                <i class="bi bi-shield-check"></i>
+                <span>Single-Use Needles</span>
+            </div>
+            <div class="trust-item">
+                <i class="bi bi-droplet"></i>
+                <span>Sterilized Equipment</span>
+            </div>
+            <div class="trust-item">
+                <i class="bi bi-person-check"></i>
+                <span>Walk-ins Welcome</span>
+            </div>
+            <div class="trust-item">
+                <i class="bi bi-geo-alt"></i>
+                <span>Ayala Malls Feliz · 4F</span>
+            </div>
+        </div>
+
+        <!-- SERVICES SNAPSHOT -->
+        <section class="services-snapshot">
+            <div class="services-snapshot-header">
+                <h2>What We Do</h2>
+                <a href="services.html">See Full Pricing →</a>
+            </div>
+            <div class="services-grid">
+                <div class="service-tile">
+                    <i class="bi bi-pen service-tile-icon"></i>
+                    <p class="service-tile-name">Permanent Tattoo</p>
+                    <p class="service-tile-desc">Black & grey, color, minimalist, illustrative, tribal, and more. Custom designs welcome.</p>
+                    <p class="service-tile-price">Starts at ₱500</p>
+                </div>
+                <div class="service-tile">
+                    <i class="bi bi-gem service-tile-icon"></i>
+                    <p class="service-tile-name">Body Piercing</p>
+                    <p class="service-tile-desc">Ear, nose, lip, and body piercings. Safe procedure with sterile single-use equipment.</p>
+                    <p class="service-tile-price">Starts at ₱300</p>
+                </div>
+                <div class="service-tile">
+                    <i class="bi bi-brush service-tile-icon"></i>
+                    <p class="service-tile-name">Henna Tattoo</p>
+                    <p class="service-tile-desc">Temporary henna designs for events, parties, or just because.</p>
+                    <p class="service-tile-price">Starts at ₱200</p>
+                </div>
+                <div class="service-tile">
+                    <i class="bi bi-pencil-square service-tile-icon"></i>
+                    <p class="service-tile-name">Custom Design</p>
+                    <p class="service-tile-desc">Bring your idea or reference — we'll sketch something unique just for you.</p>
+                    <p class="service-tile-price">Free Consultation</p>
+                </div>
+                <div class="service-tile">
+                    <i class="bi bi-bandaid service-tile-icon"></i>
+                    <p class="service-tile-name">Cover-Up Tattoo</p>
+                    <p class="service-tile-desc">Transform old or faded tattoos into something you'll love again.</p>
+                    <p class="service-tile-price">Starts at ₱800</p>
+                </div>
+                <div class="service-tile">
+                    <i class="bi bi-heart-pulse service-tile-icon"></i>
+                    <p class="service-tile-name">Aftercare Advice</p>
+                    <p class="service-tile-desc">We walk you through proper healing so your piece looks great long-term.</p>
+                    <p class="service-tile-price">Included Free</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- MARQUEE -->
         <section class="marquee">
             <p>· PERMANENT TATTOO · BLACK & GREY · COLOR · BODY PIERCING · HENNA · WALK-INS WELCOME · 4TH FLOOR AYALA MALLS FELIZ ·</p>
             <div class="marquee-content">
                 <img src="images/thumbnails/tattoo-thmb-2.webp" alt="black and grey flower stem tattoo">
-                <img src="images/thumbnails/tattoo-thmb-25.webp" alt="black and grey illustrative snake coiled around a figure with dagger and 'Mens Mortifera' lettering tattoo on upper arm">
-                <img src="images/thumbnails/tattoo-thmb-22.webp" alt="black and grey minimalist tattoo linework of lotus flower">
-                <img src="images/thumbnails/tattoo-thmb-20.webp" alt="black and grey minimalist linework tattoo of mother and daughter">
-                <img src="images/thumbnails/tattoo-thmb-15.webp" alt="black and grey linework of serpentine dragon with pink cherry blossom flowers">
-                <img src="images/thumbnails/tattoo-thmb-16.webp" alt="colored chakra symbols and hamsa hand tattoo running down the spine">
-                <img src="images/thumbnails/tattoo-thmb-12.webp" alt="colored japanese-style maneki-neko lucky cat with daruma doll ">
+                <img src="images/thumbnails/tattoo-thmb-25.webp" alt="snake coiled around a figure tattoo">
+                <img src="images/thumbnails/tattoo-thmb-22.webp" alt="minimalist lotus flower tattoo">
+                <img src="images/thumbnails/tattoo-thmb-20.webp" alt="minimalist linework tattoo of mother and daughter">
+                <img src="images/thumbnails/tattoo-thmb-15.webp" alt="serpentine dragon with cherry blossom tattoo">
+                <img src="images/thumbnails/tattoo-thmb-16.webp" alt="colored chakra symbols tattoo">
+                <img src="images/thumbnails/tattoo-thmb-12.webp" alt="japanese-style maneki-neko lucky cat tattoo">
                 <img src="images/thumbnails/tattoo-thmb-7.webp" alt="geometric hamsa hand with evil eye tattoo">
-                <img src="images/thumbnails/tattoo-thmb-5.webp" alt="tribal pattern black ink tattoo of sun and crescent moon">
+                <img src="images/thumbnails/tattoo-thmb-5.webp" alt="tribal pattern sun and crescent moon tattoo">
                 <img src="images/thumbnails/tattoo-thmb-2.webp" aria-hidden="true">
                 <img src="images/thumbnails/tattoo-thmb-25.webp" aria-hidden="true">
                 <img src="images/thumbnails/tattoo-thmb-22.webp" aria-hidden="true">
@@ -97,32 +148,78 @@
             </div>
             <a href="gallery.html" class="gallery-button">Go To Gallery</a>
         </section>
-        
     </main>
 
-    <footer>
-        <div class="footer-socials">
-            
-            <p class="footer-socials__label">Follow Us On:</p>
-            <ul class="footer-socials__list">
-                <li>
-                    <a href="https://www.facebook.com/rakistattoo/">
-                        <i class="bi bi-facebook"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.instagram.com/rakistattoo/">
-                        <i class="bi bi-instagram"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.tiktok.com/@rakistattoo">
-                        <i class="bi bi-tiktok"></i>
-                    </a>
-                </li>
-            </ul>
+    <footer class="site-footer">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <a href="index.html" class="footer-logo">
+                    <img src="images/full-res/logow.webp" alt="Rakistattoo & Body Piercing">
+                </a>
+                <img src="images/brand.svg" class="brand-svg" alt="Rakistattoo">
+                <div class="footer-socials">
+                    <ul>
+                        <li>
+                            <a href="https://www.facebook.com/rakistattoo/" aria-label="Facebook" target="_blank" rel="noopener">
+                                <i class="bi bi-facebook"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/rakistattoo/" aria-label="Instagram" target="_blank" rel="noopener">
+                                <i class="bi bi-instagram"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.tiktok.com/@rakistattoo" aria-label="TikTok" target="_blank" rel="noopener">
+                                <i class="bi bi-tiktok"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <p class="footer-col-label">Navigate</p>
+                <ul class="footer-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <p class="footer-col-label">Find Us</p>
+                <p class="footer-col-text">
+                    4th Floor Ayala Malls Feliz<br>
+                    Brgy. Dela Paz, Pasig City<br>
+                    Metro Manila, Philippines
+                </p>
+                <a class="footer-col-link"
+                    href="https://maps.google.com/?q=Ayala+Malls+Feliz+Pasig"
+                    target="_blank"
+                    rel="noopener">
+                    <i class="bi bi-box-arrow-up-right" style="font-size:0.7rem;"></i>
+                    Get Directions
+                </a>
+            </div>
+
+            <div class="footer-col">
+                <p class="footer-col-label">Hours</p>
+                <p class="footer-col-text">
+                    Mon – Fri<br>
+                    11:00 AM – 8:00 PM<br>
+                    <br>
+                    Sat – Sun<br>
+                    10:00 AM – 8:00 PM<br>
+                    <br>
+                </p>
+            </div>
         </div>
-        <div class="footer-copyright">
+
+        <hr>
+        <div class="footer-bottom">
             <p>&copy; 2026 Rakistattoo. All Rights Reserved.</p>
         </div>
     </footer>
@@ -130,6 +227,5 @@
     <div class="backdrop"></div>
 
     <script src="js/script.js"></script>
-
-</body>
+    </body>
 </html>

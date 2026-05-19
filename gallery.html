@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Browse Rakistattoo's gallery of permanent tattoo and body piercing work. Black & grey, colored, and illustrative styles.">
     <title>Rakistattoo - Gallery</title>
-    <base href="/WBDV111_MidtermLabExam-RAKISTATTOO/">
     <link rel="icon" type="image/png" href="images/thumbnails/favicon.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -39,123 +38,443 @@
 
     <main>
         <section class="gallery">
-            <h2>Gallery</h2>
+            <h1>Gallery</h1>
+            <div class="gallery-filters">
+                <div class="filter-group">
+                    <button class="filter-group__toggle">Tattoos <i class="bi bi-chevron-down"></i></button>
+                    <div class="filter-group__options">
+                        <button class="filter-btn" data-category="tattoo" data-sub="all">All Tattoos</button>
+                        <button class="filter-btn" data-category="tattoo" data-sub="black-grey">Black & Grey</button>
+                        <button class="filter-btn" data-category="tattoo" data-sub="colored">Colored</button>
+                    </div>
+                </div>
+                <div class="filter-group">
+                    <button class="filter-group__toggle">Piercings <i class="bi bi-chevron-down"></i></button>
+                    <div class="filter-group__options">
+                        <button class="filter-btn" data-category="piercing" data-sub="all">All Piercings</button>
+                        <button class="filter-btn" data-category="piercing" data-sub="ear">Ear</button>
+                        <button class="filter-btn" data-category="piercing" data-sub="facial">Facial</button>
+                        <button class="filter-btn" data-category="piercing" data-sub="body">Body</button>
+                    </div>
+                </div>
+                <button class="filter-btn filter-btn--all active" data-category="all" data-sub="all">All</button>
+            </div>
             <div class="grid">
-                <figure class="gallery-item">
+                <figure class="gallery-item"
+                        data-category="tattoo"
+                        data-sub="colored">
                     <img src="images/thumbnails/tattoo-thmb-1.webp" data-full="images/full-res/tattoo-1.png" 
-                    data-caption=""
+                    =""
                     alt="">
                 </figure>
-                <figure class="gallery-item">
+                <figure class="gallery-item"
+                        data-category="tattoo"
+                        data-sub="black-grey">
                     <img src="images/thumbnails/tattoo-thmb-2.webp" data-full="images/full-res/tattoo-2.png" 
-                    data-caption=""
+                    =""
                     alt="black and grey flower stem tattoo">
                 </figure>
-                <figure class="gallery-item">
+                <figure class="gallery-item"
+                        data-category="tattoo"
+                        data-sub="black-grey">
                     <img src="images/thumbnails/tattoo-thmb-3.webp" data-full="images/full-res/tattoo-3.png" 
-                    data-caption=""
+                    =""
+                    data-category="tattoo"
                     alt="">
                 </figure>
-                <figure class="gallery-item">
+                <figure class="gallery-item"
+                        data-category="tattoo"
+                        data-sub="black-grey">
                     <img src="images/thumbnails/tattoo-thmb-4.webp" data-full="images/full-res/tattoo-4.png" 
-                    data-caption=""
+                    =""
+                    data-category="tattoo"
                     alt="">
                 </figure>
-                <figure class="gallery-item">
+                <figure class="gallery-item"
+                        data-category="tattoo"
+                        data-sub="black-grey">
                     <img src="images/thumbnails/tattoo-thmb-5.webp" data-full="images/full-res/tattoo-5.png" 
-                    data-caption=""
+                    =""
+                    data-category="tattoo"
                     alt="tribal pattern black ink tattoo of sun and crescent moon">
                 </figure>
-                <figure class="gallery-item">
-                    <img src="images/thumbnails/tattoo-thmb-6.webp" data-full="images/full-res/tattoo-6.png" alt="">
+                <figure class="gallery-item"
+                        data-category="tattoo"
+                        data-sub="colored">
+                    <img src="images/thumbnails/tattoo-thmb-6.webp" data-full="images/full-res/tattoo-6.png"
+                     alt="">
                 </figure>
-                <figure class="gallery-item">
-                    <img src="images/thumbnails/tattoo-thmb-7.webp" data-full="images/full-res/tattoo-7.png" alt="geometric hamsa hand with evil eye tattoo">
+                <figure class="gallery-item"
+                        data-category="tattoo"
+                        data-sub="colored">
+                    <img src="images/thumbnails/tattoo-thmb-7.webp" data-full="images/full-res/tattoo-7.png"
+                    alt="geometric hamsa hand with evil eye tattoo">
                 </figure>
-                <figure class="gallery-item">
-                    <img src="images/thumbnails/tattoo-thmb-8.webp" data-full="images/full-res/tattoo-8.png" alt="">
+                <figure class="gallery-item"
+                        data-category="tattoo"
+                        data-sub="colored">
+                    <img src="images/thumbnails/tattoo-thmb-8.webp" data-full="images/full-res/tattoo-8.png"
+                    alt="">
                 </figure>
-                <figure class="gallery-item">
-                    <img src="images/thumbnails/tattoo-thmb-9.webp" data-full="images/full-res/tattoo-9.png" alt="">
+                <figure class="gallery-item"
+                        data-category="tattoo"
+                        data-sub="colored">
+                    <img src="images/thumbnails/tattoo-thmb-9.webp" data-full="images/full-res/tattoo-9.png"
+                    alt="">
                 </figure>
-                <figure class="gallery-item">
-                    <img src="images/thumbnails/tattoo-thmb-10.webp" data-full="images/full-res/tattoo-10.png" alt="">
+                <figure class="gallery-item"
+                        data-category="tattoo"
+                        data-sub="colored">
+                    <img src="images/thumbnails/tattoo-thmb-10.webp" data-full="images/full-res/tattoo-10.png"
+                    alt="">
                 </figure>
-                <figure class="gallery-item">
-                    <img src="images/thumbnails/tattoo-thmb-11.webp" data-full="images/full-res/tattoo-11.png" alt="">
+                <figure class="gallery-item"
+                        data-category="tattoo"
+                        data-sub="colored">
+                    <img src="images/thumbnails/tattoo-thmb-11.webp" data-full="images/full-res/tattoo-11.png"
+                    alt="">
                 </figure>
-                <figure class="gallery-item">
-                    <img src="images/thumbnails/tattoo-thmb-12.webp" data-full="images/full-res/tattoo-12.png" alt="colored japanese-style maneki-neko lucky cat with daruma doll">
+                <figure class="gallery-item"
+                        data-category="tattoo"
+                        data-sub="colored">
+                    <img src="images/thumbnails/tattoo-thmb-12.webp" data-full="images/full-res/tattoo-12.png"
+                    alt="colored japanese-style maneki-neko lucky cat with daruma doll">
                 </figure>
-                <figure class="gallery-item">
-                    <img src="images/thumbnails/tattoo-thmb-13.webp" data-full="images/full-res/tattoo-13.png" alt="">
+                <figure class="gallery-item"
+                        data-category="tattoo"
+                        data-sub="black-grey">
+                    <img src="images/thumbnails/tattoo-thmb-13.webp" data-full="images/full-res/tattoo-13.png"  
+                    data-category="tattoo"
+                    alt="">
                 </figure>
-                <figure class="gallery-item">
-                    <img src="images/thumbnails/tattoo-thmb-14.webp" data-full="images/full-res/tattoo-14.png" alt="">
+                <figure class="gallery-item"
+                        data-category="tattoo"
+                        data-sub="colored">
+                    <img src="images/thumbnails/tattoo-thmb-14.webp" data-full="images/full-res/tattoo-14.png"  
+                    data-category="tattoo"
+                    alt="">
                 </figure>
-                <figure class="gallery-item">
-                    <img src="images/thumbnails/tattoo-thmb-15.webp" data-full="images/full-res/tattoo-15.png" alt="black and grey linework of serpentine dragon with pink cherry blossom flowers">
+                <figure class="gallery-item"
+                        data-category="tattoo"
+                        data-sub="colored">
+                    <img src="images/thumbnails/tattoo-thmb-15.webp" data-full="images/full-res/tattoo-15.png"
+                    alt="black and grey linework of serpentine dragon with pink cherry blossom flowers">
                 </figure>
-                <figure class="gallery-item">
-                    <img src="images/thumbnails/tattoo-thmb-16.webp" data-full="images/full-res/tattoo-16.png" alt="colored chakra symbols and hamsa hand tattoo running down the spine">
+                <figure class="gallery-item"
+                        data-category="tattoo"
+                        data-sub="colored">
+                    <img src="images/thumbnails/tattoo-thmb-16.webp" data-full="images/full-res/tattoo-16.png"  
+                    data-category="tattoo"
+                    alt="colored chakra symbols and hamsa hand tattoo running down the spine">
                 </figure>
-                <figure class="gallery-item">
-                    <img src="images/thumbnails/tattoo-thmb-17.webp" data-full="images/full-res/tattoo-17.png" alt="">
+                <figure class="gallery-item"
+                        data-category="tattoo"
+                        data-sub="colored">
+                    <img src="images/thumbnails/tattoo-thmb-17.webp" data-full="images/full-res/tattoo-17.png"  
+                    data-category="tattoo"
+                    alt="">
                 </figure>
-                <figure class="gallery-item">
-                    <img src="images/thumbnails/tattoo-thmb-18.webp" data-full="images/full-res/tattoo-18.png" alt="">
+                <figure class="gallery-item"
+                        data-category="tattoo"
+                        data-sub="black-grey">
+                    <img src="images/thumbnails/tattoo-thmb-18.webp" data-full="images/full-res/tattoo-18.png"
+                    data-category="tattoo"
+                    alt="">
                 </figure>
-                <figure class="gallery-item">
-                    <img src="images/thumbnails/tattoo-thmb-19.webp" data-full="images/full-res/tattoo-19.png" alt="">
+                <figure class="gallery-item"
+                        data-category="tattoo"
+                        data-sub="black-grey">
+                    <img src="images/thumbnails/tattoo-thmb-19.webp" data-full="images/full-res/tattoo-19.png"
+                    data-category="tattoo"
+                    alt="">
                 </figure>
-                <figure class="gallery-item">
-                    <img src="images/thumbnails/tattoo-thmb-20.webp" data-full="images/full-res/tattoo-20.png" alt="black and grey minimalist linework tattoo of mother and daughter">
+                <figure class="gallery-item"
+                        data-category="tattoo"
+                        data-sub="black-grey">
+                    <img src="images/thumbnails/tattoo-thmb-20.webp" data-full="images/full-res/tattoo-20.png" 
+                    data-category="tattoo"
+                    alt="black and grey minimalist linework tattoo of mother and daughter">
                 </figure>
-                <figure class="gallery-item">
-                    <img src="images/thumbnails/tattoo-thmb-21.webp" data-full="images/full-res/tattoo-21.png" alt="">
+                <figure class="gallery-item"
+                        data-category="tattoo"
+                        data-sub="black-grey">
+                    <img src="images/thumbnails/tattoo-thmb-21.webp" data-full="images/full-res/tattoo-21.png" 
+                    data-category="tattoo"
+                    alt="">
                 </figure>
-                <figure class="gallery-item">
-                    <img src="images/thumbnails/tattoo-thmb-22.webp" data-full="images/full-res/tattoo-22.png" alt="black and grey minimalist tattoo linework of lotus flower">
+                <figure class="gallery-item"
+                        data-category="tattoo"
+                        data-sub="black-grey">
+                    <img src="images/thumbnails/tattoo-thmb-22.webp" data-full="images/full-res/tattoo-22.png" 
+                    data-category="tattoo"
+                    alt="black and grey minimalist tattoo linework of lotus flower">
                 </figure>
-                <figure class="gallery-item">
-                    <img src="images/thumbnails/tattoo-thmb-23.webp" data-full="images/full-res/tattoo-23.png" alt="">
+                <figure class="gallery-item"
+                        data-category="tattoo"
+                        data-sub="black-grey">
+                    <img src="images/thumbnails/tattoo-thmb-23.webp" data-full="images/full-res/tattoo-23.png" 
+                    data-category="tattoo"
+                    alt="">
                 </figure>
-                <figure class="gallery-item">
-                    <img src="images/thumbnails/tattoo-thmb-24.webp" data-full="images/full-res/tattoo-24.png" alt="">
+                <figure class="gallery-item"
+                        data-category="tattoo"
+                        data-sub="black-grey">
+                    <img src="images/thumbnails/tattoo-thmb-24.webp" data-full="images/full-res/tattoo-24.png" 
+                    data-category="tattoo"
+                    alt="">
                 </figure>
-                <figure class="gallery-item">
-                    <img src="images/thumbnails/tattoo-thmb-25.webp" data-full="black and grey illustrative snake coiled around a figure with dagger and 'Mens Mortifera' lettering tattoo on upper arm">
+                <figure class="gallery-item"
+                        data-category="tattoo"
+                        data-sub="black-grey">
+                    <img src="images/thumbnails/tattoo-thmb-25.webp" data-full="images/full-res/tattoo-25.png"
+                    data-category="tattoo"
+                    >
+                </figure>
+                <figure class="gallery-item"
+                        data-category="tattoo"
+                        data-sub="colored">
+                    <img src="images/thumbnails/tattoo-thmb-26.webp" data-full="images/full-res/tattoo-26.png" 
+                    data-category="tattoo"
+                    alt="">
+                </figure>
+                <figure class="gallery-item"
+                        data-category="tattoo"
+                        data-sub="colored">
+                    <img src="images/thumbnails/tattoo-thmb-27.webp" data-full="images/full-res/tattoo-27.png" 
+                    data-category="tattoo"
+                    alt="">
+                </figure>
+                <figure class="gallery-item"
+                        data-category="tattoo"
+                        data-sub="colored">
+                    <img src="images/thumbnails/tattoo-thmb-28.webp" data-full="images/full-res/tattoo-28.png" 
+                    data-category="tattoo"
+                    alt="">
+                </figure>
+                <figure class="gallery-item"
+                        data-category="tattoo"
+                        data-sub="black-grey">
+                    <img src="images/thumbnails/tattoo-thmb-29.webp" data-full="images/full-res/tattoo-29.png" 
+                    data-category="tattoo"
+                    alt="">
+                </figure>
+                <figure class="gallery-item"
+                        data-category="tattoo"
+                        data-sub="black-grey">
+                    <img src="images/thumbnails/tattoo-thmb-30.webp" data-full="images/full-res/tattoo-30.png" 
+                    data-category="tattoo"
+                    alt="">
+                </figure>
+                <figure class="gallery-item"
+                        data-category="tattoo"
+                        data-sub="black-grey">
+                    <img src="images/thumbnails/tattoo-thmb-31.webp" data-full="images/full-res/tattoo-31.png" 
+                    data-category="tattoo"
+                    alt="">
+                </figure>
+                <figure class="gallery-item"
+                        data-category="tattoo"
+                        data-sub="colored">
+                    <img src="images/thumbnails/tattoo-thmb-32.webp" data-full="images/full-res/tattoo-32.png"
+                    alt="">
+                </figure>
+                <figure class="gallery-item"
+                        data-category="tattoo"
+                        data-sub="black-grey">
+                    <img src="images/thumbnails/tattoo-thmb-33.webp" data-full="images/full-res/tattoo-33.png"
+                    alt="">
+                </figure>
+                <figure class="gallery-item"
+                        data-category="tattoo"
+                        data-sub="colored">
+                    <img src="images/thumbnails/tattoo-thmb-34.webp" data-full="images/full-res/tattoo-34.png"
+                    alt="">
+                </figure>
+                <figure class="gallery-item"
+                        data-category="tattoo"
+                        data-sub="colored">
+                    <img src="images/thumbnails/tattoo-thmb-35.webp" data-full="images/full-res/tattoo-35.png"
+                    alt="">
+                </figure>
+                <figure class="gallery-item"
+                        data-category="tattoo"
+                        data-sub="black-grey">
+                    <img src="images/thumbnails/tattoo-thmb-36.webp" data-full="images/full-res/tattoo-36.png"
+                    alt="">
+                </figure>
+                <figure class="gallery-item"
+                        data-category="tattoo"
+                        data-sub="black-grey">
+                    <img src="images/thumbnails/tattoo-thmb-37.webp" data-full="images/full-res/tattoo-37.png"
+                    alt="">
+                </figure>
+                <figure class="gallery-item"
+                        data-category="piercing"
+                        data-sub="ear">
+                    <img src="images/thumbnails/piercing-1.webp" data-full="images/full-res/piercing-1.png"
+                    alt="">
+                </figure>
+                <figure class="gallery-item"
+                        data-category="piercing"
+                        data-sub="ear">
+                    <img src="images/thumbnails/piercing-2.webp" data-full="images/full-res/piercing-2.png"
+                    alt="">
+                </figure>
+                <figure class="gallery-item"
+                        data-category="piercing"
+                        data-sub="ear">
+                    <img src="images/thumbnails/piercing-3.webp" data-full="images/full-res/piercing-3.png" 
+                    data-category="piercing"
+                    alt="">
+                </figure>
+                <figure class="gallery-item"
+                        data-category="piercing"
+                        data-sub="ear">
+                    <img src="images/thumbnails/piercing-4.webp" data-full="images/full-res/piercing-4.png" 
+                    data-category="piercing"
+                    alt="">
+                </figure>
+                <figure class="gallery-item"
+                        data-category="piercing"
+                        data-sub="ear">
+                    <img src="images/thumbnails/piercing-5.webp" data-full="images/full-res/piercing-5.png" 
+                    data-category="piercing"
+                    alt="">
+                </figure>
+                <figure class="gallery-item"
+                        data-category="piercing"
+                        data-sub="ear">
+                    <img src="images/thumbnails/piercing-6.webp" data-full="images/full-res/piercing-6.png">
+                </figure>
+                <figure class="gallery-item"
+                        data-category="piercing"
+                        data-sub="ear">
+                    <img src="images/thumbnails/piercing-7.webp" data-full="images/full-res/piercing-7.png">
+                </figure>
+                <figure class="gallery-item"
+                        data-category="piercing"
+                        data-sub="body">
+                    <img src="images/thumbnails/piercing-8.webp" data-full="images/full-res/piercing-8.png">
+                </figure>
+                <figure class="gallery-item"
+                        data-category="piercing"
+                        data-sub="ear">
+                    <img src="images/thumbnails/piercing-9.webp" data-full="images/full-res/piercing-9.png">
+                </figure>
+                <figure class="gallery-item"
+                        data-category="piercing"
+                        data-sub="body">
+                    <img src="images/thumbnails/piercing-10.webp" data-full="images/full-res/piercing-10.png">
+                </figure>
+                <figure class="gallery-item"
+                        data-category="piercing"
+                        data-sub="ear">
+                    <img src="images/thumbnails/piercing-11.webp" data-full="images/full-res/piercing-11.png">
+                </figure>
+                <figure class="gallery-item"
+                        data-category="piercing"
+                        data-sub="ear">
+                    <img src="images/thumbnails/piercing-12.webp" data-full="images/full-res/piercing-12.png">
+                </figure>
+                <figure class="gallery-item"
+                        data-category="piercing"
+                        data-sub="facial">
+                    <img src="images/thumbnails/piercing-13.webp" data-full="images/full-res/piercing-13.png">
+                </figure>
+                <figure class="gallery-item"
+                        data-category="piercing"
+                        data-sub="facial">
+                    <img src="images/thumbnails/piercing-14.webp" data-full="images/full-res/piercing-14.png">
+                </figure>
+                <figure class="gallery-item"
+                        data-category="piercing"
+                        data-sub="ear">
+                    <img src="images/thumbnails/piercing-15.webp" data-full="images/full-res/piercing-15.png">
                 </figure>
             </div>
         </section>
 
-        <a href="contact.html" class="gallery-cta-button">Book a Session</a>
+        <a href="contact.html#booking-form" class="gallery-cta-button">Book a Session</a>
 
     </main>
 
-    <footer>
-        <div class="footer-socials">
-            
-            <p class="footer-socials__label">Follow Us On:</p>
-            <ul class="footer-socials__list">
-                <li>
-                    <a href="https://www.facebook.com/rakistattoo/">
-                        <i class="bi bi-facebook"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.instagram.com/rakistattoo/">
-                        <i class="bi bi-instagram"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.tiktok.com/@rakistattoo">
-                        <i class="bi bi-tiktok"></i>
-                    </a>
-                </li>
-            </ul>
+    <footer class="site-footer">
+        <div class="footer-top">
+    
+            <!-- BRAND + SOCIALS -->
+            <div class="footer-brand">
+                <a href="index.html" class="footer-logo">
+                    <img src="images/full-res/logow.webp" alt="Rakistattoo & Body Piercing">
+                </a>
+                <img src="images/brand.svg" class="brand-svg" alt="Rakistattoo">
+                <div class="footer-socials">
+                    <ul>
+                        <li>
+                            <a href="https://www.facebook.com/rakistattoo/" aria-label="Facebook" target="_blank" rel="noopener">
+                                <i class="bi bi-facebook"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/rakistattoo/" aria-label="Instagram" target="_blank" rel="noopener">
+                                <i class="bi bi-instagram"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.tiktok.com/@rakistattoo" aria-label="TikTok" target="_blank" rel="noopener">
+                                <i class="bi bi-tiktok"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+    
+            <!-- NAVIGATE -->
+            <div class="footer-col">
+                <p class="footer-col-label">Navigate</p>
+                <ul class="footer-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+    
+            <!-- FIND US -->
+            <div class="footer-col">
+                <p class="footer-col-label">Find Us</p>
+                <p class="footer-col-text">
+                    4th Floor Ayala Malls Feliz<br>
+                    Brgy. Dela Paz, Pasig City<br>
+                    Metro Manila, Philippines
+                </p>
+                <a class="footer-col-link"
+                href="https://maps.google.com/?q=Ayala+Malls+Feliz+Pasig"
+                target="_blank"
+                rel="noopener">
+                    <i class="bi bi-box-arrow-up-right" style="font-size:0.7rem;"></i>
+                    Get Directions
+                </a>
+            </div>
+    
+            <!-- HOURS -->
+            <div class="footer-col">
+                <p class="footer-col-label">Hours</p>
+                <p class="footer-col-text">
+                    Mon – Fri<br>
+                    11:00 AM – 8:00 PM<br>
+                    <br>
+                    Sat – Sun<br>
+                    10:00 AM – 8:00 PM<br>
+                    <br>
+                </p>
+            </div>
+    
         </div>
-        <div class="footer-copyright">
+    
+        <!-- BOTTOM BAR -->
+        <hr>
+        <div class="footer-bottom">
             <p>&copy; 2026 Rakistattoo. All Rights Reserved.</p>
         </div>
     </footer>

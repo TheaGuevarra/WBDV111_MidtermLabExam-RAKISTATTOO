@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contact Rakistattoo & Body Piercing at Ayala Malls Feliz, Pasig City. Open Monday to Sunday, 10AM to 8PM.">
-    <title>Rakistattoo - Contact Us</title>
-    <base href="/WBDV111_MidtermLabExam-RAKISTATTOO/">
+    <meta name="description" content="Contact Rakistattoo & Body Piercing at Ayala Malls Feliz, Pasig City. Book your tattoo or piercing appointment online.">
+    <title>Rakistattoo - Contact & Booking</title>
     <link rel="icon" type="image/png" href="images/thumbnails/favicon.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="page-contact">
         
     <header>
         <div class="brand">
@@ -29,73 +28,253 @@
                 <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
-        <button class="hamburger">
-            <i class="bi bi-list"></i>
-        </button>
+            <button class="hamburger">
+                <i class="bi bi-list"></i>
+            </button>
         </nav>
         <hr>
     </header>
 
-
     <main>
-        <div class="contact-grid">
-            <section class="contact-location">
-                <h2>Visit Us</h2>
-                <div class="map-embed">
-                    <iframe title="Rakistattoo location on Google Maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3860.628933872802!2d121.0945139!3d14.620201900000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b983a689093b%3A0x814e1a156c2b54b4!2sRakistattoo!5e0!3m2!1sen!2sph!4v1776364607371!5m2!1sen!2sph" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-                <address>
-                    <strong>Rakistattoo & Body Piercing</strong>
-                    4th Floor (Market Finds Section), Ayala Malls Feliz
-                    Marcos Highway, Brgy. Dela Paz, Pasig City
-                    1610 Metro Manila
-                </address>
-            </section>
+        <div class="contact-header">
+            <h1>Contact & Booking</h1>
+        </div>
 
-            <section class="contact-hours">
-                <h2>Operating Hours</h2>
-                <p>
-                    Monday – Sunday |
-                    <time datetime="10:00">10:00 AM</time> – <time datetime="20:00">8:00 PM</time>
-                </p>       
-            </section>
-            
-            <section class="contact-methods">
-            <h2>Get in Touch</h2>
-            <ul>
-                <li><a href="mailto:raki.ilumin@gmail.com">raki.ilumin@gmail.com</a></li>
-                <li><a href="tel:+639267530544">0926 753 0544</a></li>
-                <li><a href="https://www.facebook.com/rakistattoo/">Facebook — @rakistattoo</a></li>
-                <li><a href="https://www.instagram.com/rakistattoo/">Instagram — @rakistattoo</a></li>
-                <li><a href="https://www.tiktok.com/@rakistattoo">TikTok — @rakistattoo</a></li>
-            </ul>
-            </section>
+        <div class="contact-body">
+
+            <!-- LEFT — map + info -->
+            <div class="contact-left">
+
+                <div class="contact-map">
+                    <iframe
+                        title="Rakistattoo location on Google Maps"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3860.628933872802!2d121.0945139!3d14.620201900000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b983a689093b%3A0x814e1a156c2b54b4!2sRakistattoo!5e0!3m2!1sen!2sph!4v1776364607371!5m2!1sen!2sph"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+
+                <div class="contact-info">
+
+                    <div class="contact-block">
+                        <p class="contact-block-label">Find Us</p>
+                        <address>
+                            4th Floor (Market Finds Section)<br>
+                            Ayala Malls Feliz, Marcos Highway<br>
+                            Brgy. Dela Paz, Pasig City<br>
+                            1610 Metro Manila
+                        </address>
+                    </div>
+
+                    <div class="contact-block">
+                        <p class="contact-block-label">Hours</p>
+                        <p class="contact-hours-text">
+                            Monday – Sunday<br>
+                            10:00 AM – 8:00 PM<br>
+                            Walk-ins Welcome
+                        </p>
+                    </div>
+
+                    <div class="contact-block">
+                        <p class="contact-block-label">Get in Touch</p>
+                        <ul class="contact-links">
+                            <li><a href="mailto:raki.ilumin@gmail.com">raki.ilumin@gmail.com</a></li>
+                            <li><a href="tel:+639267530544">0926 753 0544</a></li>
+                            <li><a href="https://www.facebook.com/rakistattoo/" target="_blank" rel="noopener">Facebook — @rakistattoo</a></li>
+                            <li><a href="https://www.instagram.com/rakistattoo/" target="_blank" rel="noopener">Instagram — @rakistattoo</a></li>
+                            <li><a href="https://www.tiktok.com/@rakistattoo" target="_blank" rel="noopener">TikTok — @rakistattoo</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- RIGHT — FULL BOOKING FORM -->
+            <div class="contact-right" id="booking-form">
+
+                <p class="form-eyebrow">Book a Session</p>
+                <h2>Send Us a Message</h2>
+                <p class="form-sub">Fill this out and we'll get back to you to confirm your appointment. Walk-ins are always welcome.</p>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="fname">First Name</label>
+                        <input type="text" id="fname" placeholder="Juan">
+                    </div>
+                    <div class="form-group">
+                        <label for="lname">Last Name</label>
+                        <input type="text" id="lname" placeholder="Dela Cruz">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="contact">Contact Number</label>
+                    <input type="tel" id="contact" placeholder="09XX XXX XXXX" maxlength="13" inputmode="numeric">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" placeholder="juan@email.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="service">Service</label>
+                    <select id="service">
+                        <option value="" disabled selected>Select a service</option>
+                        <option value="tattoo">Permanent Tattoo</option>
+                        <option value="piercing">Body Piercing</option>
+                        <option value="henna">Henna Tattoo</option>
+                        <option value="coverup">Cover-Up Tattoo</option>
+                    </select>
+                </div>
+
+                <!-- TATTOO SUB-OPTIONS -->
+                <div class="form-sub" id="sub-tattoo" style="display:none;">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="tattoo-size">Size</label>
+                            <select id="tattoo-size">
+                                <option value="" disabled selected>Select size</option>
+                                <option>Minimalist</option>
+                                <option>Small</option>
+                                <option>Medium</option>
+                                <option>Large</option>
+                                <option>Half Sleeve</option>
+                                <option>Full Sleeve</option>
+                                <option>Back Piece</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="tattoo-color">Style</label>
+                            <select id="tattoo-color">
+                                <option value="" disabled selected>Select style</option>
+                                <option>Black & Grey</option>
+                                <option>Colored</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PIERCING SUB-OPTIONS -->
+                <div class="form-sub" id="sub-piercing" style="display:none;">
+                    <div class="form-group">
+                        <label for="piercing-type">Piercing Type</label>
+                        <select id="piercing-type">
+                            <option value="" disabled selected>Select type</option>
+                            <option value="ear">Ear</option>
+                            <option value="facial">Facial</option>
+                            <option value="body">Body</option>
+                        </select>
+                    </div>
+                    <div class="form-group" id="piercing-placement-group" style="display:none;">
+                        <label for="piercing-placement">Placement</label>
+                        <select id="piercing-placement">
+                            <option value="" disabled selected>Select placement</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- HENNA SUB-OPTIONS -->
+                <div class="form-sub" id="sub-henna" style="display:none;">
+                    <div class="form-group">
+                        <label for="henna-size">Size</label>
+                        <select id="henna-size">
+                            <option value="" disabled selected>Select size</option>
+                            <option>3 × 3 in. — ₱150</option>
+                            <option>5 × 5 in. — ₱300</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="preferred-date">Preferred Date</label>
+                    <input type="date" id="preferred-date">
+                </div>
+
+                <div class="form-group">
+                    <label for="details">Tell Us About Your Idea</label>
+                    <textarea id="details" placeholder="Describe your design, placement, size, style, or any references you have..."></textarea>
+                </div>
+
+                <button class="contact-submit" id="formSubmit">Send Request</button>
+
+            </div>
+
         </div>
     </main>
 
-    <footer>
-        <div class="footer-socials">
-            
-            <p class="footer-socials__label">Follow Us On:</p>
-            <ul class="footer-socials__list">
-                <li>
-                    <a href="https://www.facebook.com/rakistattoo/">
-                        <i class="bi bi-facebook"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.instagram.com/rakistattoo/">
-                        <i class="bi bi-instagram"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.tiktok.com/@rakistattoo">
-                        <i class="bi bi-tiktok"></i>
-                    </a>
-                </li>
-            </ul>
+    <footer class="site-footer">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <a href="index.html" class="footer-logo">
+                    <img src="images/full-res/logow.webp" alt="Rakistattoo & Body Piercing">
+                </a>
+                <img src="images/brand.svg" class="brand-svg" alt="Rakistattoo">
+                <div class="footer-socials">
+                    <ul>
+                        <li>
+                            <a href="https://www.facebook.com/rakistattoo/" aria-label="Facebook" target="_blank" rel="noopener">
+                                <i class="bi bi-facebook"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/rakistattoo/" aria-label="Instagram" target="_blank" rel="noopener">
+                                <i class="bi bi-instagram"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.tiktok.com/@rakistattoo" aria-label="TikTok" target="_blank" rel="noopener">
+                                <i class="bi bi-tiktok"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <p class="footer-col-label">Navigate</p>
+                <ul class="footer-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <p class="footer-col-label">Find Us</p>
+                <p class="footer-col-text">
+                    4th Floor Ayala Malls Feliz<br>
+                    Brgy. Dela Paz, Pasig City<br>
+                    Metro Manila, Philippines
+                </p>
+                <a class="footer-col-link"
+                    href="https://maps.google.com/?q=Ayala+Malls+Feliz+Pasig"
+                    target="_blank"
+                    rel="noopener">
+                    <i class="bi bi-box-arrow-up-right" style="font-size:0.7rem;"></i>
+                    Get Directions
+                </a>
+            </div>
+
+            <div class="footer-col">
+                <p class="footer-col-label">Hours</p>
+                <p class="footer-col-text">
+                    Mon – Fri<br>
+                    11:00 AM – 8:00 PM<br>
+                    <br>
+                    Sat – Sun<br>
+                    10:00 AM – 8:00 PM<br>
+                    <br>
+                </p>
+            </div>
         </div>
-        <div class="footer-copyright">
+
+        <hr>
+        <div class="footer-bottom">
             <p>&copy; 2026 Rakistattoo. All Rights Reserved.</p>
         </div>
     </footer>
@@ -103,6 +282,6 @@
     <div class="backdrop"></div>
 
     <script src="js/script.js"></script>
-    
+
 </body>
 </html>

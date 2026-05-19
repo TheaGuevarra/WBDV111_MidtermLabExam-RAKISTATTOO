@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Learn about Rakistattoo & Body Piercing, serving clients since 2017 at Ayala Malls Feliz with permanent tattoos, piercings, and henna.">
     <title>Rakistattoo - About</title>
-    <base href="/WBDV111_MidtermLabExam-RAKISTATTOO/">
     <link rel="icon" type="image/png" href="images/thumbnails/favicon.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="page-about">
     
     <header>
         <div class="brand">
@@ -37,59 +36,131 @@
     </header>
 
 
-    <main>
-        <h1>About Us</h1>
-        <section class="about">
-            <div class="about-image-main">
-                <img src="images/full-res/about-us-1.jpg" alt="Rakistattoo artists smiling in front of the studio at Ayala Malls Feliz">
-            </div>
-            <div class="about-side-container">
-                <div class="about-text">
-                    <p>
-                        <span class="emphasized">
-                            Rakistattoo & Body Piercing has been doing clean, quality work since 2017 —
-
-                        </span>
-
-                        and in 2019, we found our home on the 4th floor of Ayala Malls Feliz. Whether 
-                        you're coming in for a custom tattoo, a piercing, or just to vibe, we've got you. 
-                        We do permanent tattoos in black-and-grey and colored styles, body piercing with 
-                        full aftercare and downsizing, and henna for when you're not quite ready to commit. 
-                        We cater to clients 18 and above, and we take hygiene and good work seriously — 
-                        because you deserve both.
-                    </p>
-                </div>
-
-                <div class="about-accent-images">
-                    <img src="images/full-res/about-us-3.jpg" alt="Rakistattoo studio storefront at Ayala Malls Feliz ">
-                </div>
+        <main>
+        <section class="about-hero">
+            <div class="about-hero-content">
+                <h1 class="about-hero-title">About</h1>
+                <img class="about-hero-logo"
+                    src="images/full-res/logow.webp"
+                    alt="Rakistattoo emblem">
+                <img class="about-hero-wordmark"
+                    src="images/brand.svg"
+                    alt="Rakistattoo & Body Piercing">
+                <p class="about-hero-eyebrow">Est. 2017 · Ayala Malls Feliz · Pasig City</p>
             </div>
         </section>
+    
+        <!-- SECTION 1 — Our Story (team photo hidden on mobile via ID) -->
+        <section class="about-section" id="about-story">
+            <div class="about-section-img">
+                <img src="images/full-res/about-us-1.jpg"
+                    alt="Rakistattoo artists at the studio">
+            </div>
+            <div class="about-section-text">
+                <p class="section-label">Our Story</p>
+                <h2>Where It All Began</h2>
+                <p class="section-body">Founded in 2017, Rakistattoo began with a simple foundation: a deep love for the craft and a commitment to every person who walked through our doors. We didn't start with flashy advertisements; we started with a pair of steady hands and the smiles of our first satisfied neighbors. To us, you aren't just a client — you are a collaborator. Every line we ink and every piercing we place is handled with a gentle touch and a focus on your comfort. We believe that an artful tattoo is a partnership of trust, and we pour our heart into ensuring your experience is as memorable as the art you take home.</p>
+            </div>
+        </section>
+    
+        <!-- SECTION 2 — The Promise -->
+        <section class="about-section reverse">
+            <div class="about-section-img">
+                <img src="images/full-res/about-us-2.jpg"
+                    alt="Rakistattoo artist at work">
+            </div>
+            <div class="about-section-text">
+                <p class="section-label">The Rakistattoo Promise</p>
+                <h2>Trust Earned, Not Given</h2>
+                <p class="section-body">Rakistattoo has been dedicated to the art of transformation. What began as a journey fueled by raw skill and the support of our local community has grown into a sanctuary for those seeking thoughtful tattoos and piercings. We understand that trust is earned, not given. That's why we prioritize a safe, welcoming environment where your vision is respected and your well-being is our first priority. From the first sketch to the final healing steps, we are with you every inch of the way.</p>
+            </div>
+        </section>
+    
+        <!-- SECTION 3 — About -->
+        <section class="about-section">
+            <div class="about-section-img">
+                <img src="images/full-res/about-us-4.jpg"
+                    alt="Rakistattoo storefront at Ayala Malls Feliz">
+            </div>
+            <div class="about-section-text">
+                <p class="section-label">About Rakistattoo</p>
+                <h2>A Studio That Feels Like Home</h2>
+                <p class="section-body">Established in 2017, Rakistattoo was built on the word-of-mouth of happy friends and a passion for honest artistry. Our studio is a space where your ideas become timeless art and your safety is never a secondary thought. We lean on years of dedication to provide a tattooing and piercing experience that feels like home. Whether it's your first piece or your twentieth, we put our best into every detail to ensure you leave our studio with art you love and a memory you cherish.</p>
+            </div>
+        </section>
+    
     </main>
 
-    <footer>
-        <div class="footer-socials">
-            
-            <p class="footer-socials__label">Follow Us On:</p>
-            <ul class="footer-socials__list">
-                <li>
-                    <a href="https://www.facebook.com/rakistattoo/">
-                        <i class="bi bi-facebook"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.instagram.com/rakistattoo/">
-                        <i class="bi bi-instagram"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.tiktok.com/@rakistattoo">
-                        <i class="bi bi-tiktok"></i>
-                    </a>
-                </li>
-            </ul>
+    <footer class="site-footer">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <a href="index.html" class="footer-logo">
+                    <img src="images/full-res/logow.webp" alt="Rakistattoo & Body Piercing">
+                </a>
+                <img src="images/brand.svg" class="brand-svg" alt="Rakistattoo">
+                <div class="footer-socials">
+                    <ul>
+                        <li>
+                            <a href="https://www.facebook.com/rakistattoo/" aria-label="Facebook" target="_blank" rel="noopener">
+                                <i class="bi bi-facebook"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/rakistattoo/" aria-label="Instagram" target="_blank" rel="noopener">
+                                <i class="bi bi-instagram"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.tiktok.com/@rakistattoo" aria-label="TikTok" target="_blank" rel="noopener">
+                                <i class="bi bi-tiktok"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <p class="footer-col-label">Navigate</p>
+                <ul class="footer-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <p class="footer-col-label">Find Us</p>
+                <p class="footer-col-text">
+                    4th Floor Ayala Malls Feliz<br>
+                    Brgy. Dela Paz, Pasig City<br>
+                    Metro Manila, Philippines
+                </p>
+                <a class="footer-col-link"
+                    href="https://maps.google.com/?q=Ayala+Malls+Feliz+Pasig"
+                    target="_blank"
+                    rel="noopener">
+                    <i class="bi bi-box-arrow-up-right" style="font-size:0.7rem;"></i>
+                    Get Directions
+                </a>
+            </div>
+
+            <div class="footer-col">
+                <p class="footer-col-label">Hours</p>
+                <p class="footer-col-text">
+                    Mon – Fri<br>
+                    11:00 AM – 8:00 PM<br>
+                    <br>
+                    Sat – Sun<br>
+                    10:00 AM – 8:00 PM<br>
+                    <br>
+                </p>
+            </div>
         </div>
-        <div class="footer-copyright">
+
+        <hr>
+        <div class="footer-bottom">
             <p>&copy; 2026 Rakistattoo. All Rights Reserved.</p>
         </div>
     </footer>

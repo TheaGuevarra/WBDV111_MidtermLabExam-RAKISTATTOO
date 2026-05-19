@@ -1,32 +1,10 @@
 /* ============================================================
    RAKISTATTOO — Main Stylesheet
-   ============================================================
-   TABLE OF CONTENTS
-   1. Variables & Reset
-   2. Typography
-   3. Header & Navigation
-   4. Hero
-   5. Features
-   6. Marquee
-   7. About
-   8. Services & Tables
-   9. Gallery & Lightbox
-   10. Contact
-   11. Footer
-   12. Media Queries
-   ============================================================ */
+   ========================================================== */
 
-
-/* ============================================================
+/* ──────────────────────────────────────────────────────────
    1. VARIABLES & RESET
-   ============================================================ */
-
-:root {
-    --bg-color: #F8F9F7;
-    --text-main: #3E3A41;
-    --ink-black: #080607;
-    --muted-gray: #7B7A7E;
-}
+   ────────────────────────────────────────────────────────── */
 
 * {
     margin: 0;
@@ -34,9 +12,12 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: #080607;
-    margin: auto 0;
 }
 
 body::before {
@@ -63,7 +44,7 @@ main {
     position: fixed;
     inset: 0;
     background: rgba(0, 0, 0, 0.4);
-    z-index: 999;
+    z-index: 900;
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease;
@@ -74,10 +55,9 @@ main {
     pointer-events: auto;
 }
 
-
-/* ============================================================
+/* ──────────────────────────────────────────────────────────
    2. TYPOGRAPHY
-   ============================================================ */
+   ────────────────────────────────────────────────────────── */
 
 .font-header {
     font-family: "Bebas Neue", sans-serif;
@@ -87,17 +67,16 @@ main {
     letter-spacing: 1px;
 }
 
-.font-title, h1, h2 {
+h1, h2, .font-title {
     font-family: "Special Gothic Expanded One", sans-serif;
     text-transform: uppercase;
     letter-spacing: 0.2rem;
-    font-size: clamp(1rem, 5vh, 3.75rem);
+    font-size: clamp(1.2rem, 4vh, 2.5rem);
     color: #F8F9F7;
-    padding: 0;
     margin-bottom: 1rem;
 }
 
-.font-regular, p {
+p, .font-regular {
     font-family: "Montserrat", sans-serif;
 }
 
@@ -114,10 +93,9 @@ a i {
     color: #F8F9F7;
 }
 
-
-/* ============================================================
+/* ──────────────────────────────────────────────────────────
    3. HEADER & NAVIGATION
-   ============================================================ */
+   ────────────────────────────────────────────────────────── */
 
 header {
     position: sticky;
@@ -131,7 +109,6 @@ header {
 }
 
 header a {
-    margin: 0;
     text-decoration: none;
     color: inherit;
 }
@@ -153,11 +130,11 @@ header hr {
     font-weight: 500;
     letter-spacing: 1px;
     border-right: 2px solid #F8F9F7;
-    padding: clamp(20px, 2vw, 25px) clamp(20px, 1.5vw, 20px) clamp(0px, 1vw, 5px);
+    padding: clamp(10px, 1vw, 14px) clamp(16px, 1.5vw, 20px) clamp(0px, 0.5vw, 4px);
 }
 
 .brand img {
-    height: clamp(2.5rem, 4vw, 5rem);
+    height: clamp(2rem, 3vw, 3.5rem);
     width: auto;
 }
 
@@ -165,11 +142,7 @@ header hr {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    padding: 0 5% 15px;
-}
-
-nav {
-    margin: 0 1rem;
+    padding: 0 1.5% 1.5%;
 }
 
 nav ul {
@@ -208,170 +181,449 @@ nav ul li a.active::after {
 }
 
 .nav-label {
-        display: none;
-    }
+    display: none;
+}
 
 .hamburger {
     color: #F8F9F7;
     display: none;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
 }
 
+/* ──────────────────────────────────────────────────────────
+   4. HOMEPAGE OVERRIDES
+   ────────────────────────────────────────────────────────── */
 
-/* ============================================================
-   4. HERO
-   ============================================================ */
+body.page-home main {
+    padding: 0;
+    overflow-x: hidden;
+}
 
-.hero {
+/* Hero Section */
+body.page-home main section.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    min-height: 92vh;
+    background-color: #080607;
+    color: #F8F9F7;
+    overflow: hidden;
     position: relative;
+}
+
+body.page-home main section.hero > img.hero-bg-img {
+    display: none;
+}
+
+body.page-home main section.hero div.hero-left {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    border-radius: 2px;
-    gap: 20px;
-    width: 100%;
-    padding: 0 10%;
-    min-height: 85vh;
+    gap: 1.5rem;
+    padding: clamp(2rem, 6vw, 6rem) clamp(2rem, 5vw, 5rem);
+    position: relative;
+    z-index: 2;
+}
+
+body.page-home main section.hero div.hero-left p.hero-eyebrow {
+    font-family: "Montserrat", sans-serif;
+    font-size: clamp(0.6rem, 1vw, 0.8rem);
+    font-weight: 700;
+    letter-spacing: 0.4rem;
+    text-transform: uppercase;
+    color: #F8F9F7;
+    opacity: 0.45;
+}
+
+body.page-home main section.hero div.hero-left h1 {
+    font-family: "Special Gothic Expanded One", sans-serif;
+    font-size: clamp(2.8rem, 5.5vw, 7rem);
+    color: #F8F9F7;
+    line-height: 0.95;
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+}
+
+body.page-home main section.hero div.hero-left h1 span.no-wrap {
+    display: block;
+    white-space: nowrap;
+}
+
+body.page-home main section.hero div.hero-left p.hero-tagline {
+    font-family: "Montserrat", sans-serif;
+    font-size: clamp(0.85rem, 1.4vw, 1.1rem);
+    color: #F8F9F7;
+    opacity: 0.65;
+    line-height: 1.7;
+    max-width: 42ch;
+}
+
+body.page-home main section.hero div.hero-left div.hero-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+body.page-home main section.hero div.hero-left div.hero-actions a.hero-cta-primary {
+    display: inline-block;
+    background: #F8F9F7;
+    color: #080607;
+    font-family: "Special Gothic Expanded One", sans-serif;
+    font-size: clamp(0.6rem, 1vw, 0.8rem);
+    letter-spacing: 0.25rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 14px 28px;
+    border: 2px solid #F8F9F7;
+    transition: background 0.25s ease, color 0.25s ease;
+}
+
+body.page-home main section.hero div.hero-left div.hero-actions a.hero-cta-primary:hover {
+    background: transparent;
+    color: #F8F9F7;
+}
+
+body.page-home main section.hero div.hero-left div.hero-actions a.hero-cta-secondary {
+    display: inline-block;
+    background: transparent;
+    color: #F8F9F7;
+    font-family: "Special Gothic Expanded One", sans-serif;
+    font-size: clamp(0.6rem, 1vw, 0.8rem);
+    letter-spacing: 0.25rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 14px 28px;
+    border: 2px solid rgba(248, 249, 247, 0.25);
+    transition: border-color 0.25s ease;
+}
+
+body.page-home main section.hero div.hero-left div.hero-actions a.hero-cta-secondary:hover {
+    border-color: #F8F9F7;
+}
+
+body.page-home main section.hero div.hero-right {
+    display: block;
+    position: relative;
+    height: 92vh;
     overflow: hidden;
-    background-color: #F8F9F7;
-    color: #080607;
-    margin: 0;
-    text-align: justify;
-    text-justify: inter-word;
 }
 
-.hero-text {
-    position: relative;
-    z-index: 2;
-}
-
-.hero h1 {
-    font-size: clamp(3rem, 4vw, 5.5rem);
-    color: #080607;
-    position: relative;
-    padding: 10px;
-    margin: 0 0 1rem;
-    z-index: 2;
-}
-
-.hero p {
-    position: relative;
-    z-index: 2;
-    font-size: clamp(1.3rem, 2.5vw, 1.7rem);
-    font-weight: 500;
-    text-align: justify;
-    line-height: 1.4rem;
-    padding: 10px;
-    margin: 0 0 1rem;
-}
-
-.hero img {
-    position: absolute;
-    top: 0;
-    left: 0;
+body.page-home main section.hero div.hero-right img {
+    display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: 0% 50%;
-    z-index: 1;
-    opacity: 0.4;
-    filter: blur(2.5px) contrast(100%) invert(1);
-    transform: scale(1.1);
+    object-position: center 30%;
+    filter: grayscale(0.7) contrast(110%);
+    opacity: 0.8;
 }
 
-.cycle-word {
-    display: inline;
-    line-height: 1;
-    min-width: 100%;
-    transition: color 0.4s ease;
+/* Trust Bar */
+body.page-home main div.trust-bar {
+    display: flex;
+    justify-content: center;
+    gap: clamp(1rem, 3vw, 6rem);
+    padding: clamp(2rem, 4vw, 3.5rem) 5%;
+    border-top: 1px solid rgba(248, 249, 247, 0.08);
+    border-bottom: 1px solid rgba(248, 249, 247, 0.08);
 }
 
-/* .hero h1:hover .cycle-word {
-    color: #ffffff;
-} */
+body.page-home main div.trust-bar div.trust-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
 
-.cta-button {
-    position: relative;
-    z-index: 5;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(3px) contrast(200%);
-    border: 2px solid rgba(0, 0, 0, 0.4);
-    border-radius: 8px;
-    color: #080607;
-    -webkit-text-stroke: 1px rgba(19, 18, 18, 0.474);
-    padding: 10px 25px;
-    font-family: "Special Gothic Expanded One", sans-serif;
+body.page-home main div.trust-bar div.trust-item i {
+    font-size: 1.2rem;
+    color: #F8F9F7;
+    opacity: 0.35;
+}
+
+body.page-home main div.trust-bar div.trust-item span {
+    font-family: "Montserrat", sans-serif;
+    font-size: clamp(0.5rem, 1vw, 0.85rem);
+    font-weight: 600;
+    letter-spacing: clamp(0.05rem, 0.15vw, 0.15rem);
     text-transform: uppercase;
-    letter-spacing: 0.2rem;
+    color: #F8F9F7;
+    opacity: 0.55;
+    white-space: nowrap;
+}
+
+/* Services Snapshot */
+body.page-home main section.services-snapshot {
+    padding: clamp(3rem, 6vw, 6rem) 5%;
+    border-top: 1px solid rgba(248, 249, 247, 0.08);
+    border-bottom: 1px solid rgba(248, 249, 247, 0.08);
+}
+
+body.page-home main section.services-snapshot div.services-snapshot-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 2.5rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+body.page-home main section.services-snapshot div.services-snapshot-header h2 {
+    font-family: "Special Gothic Expanded One", sans-serif;
+    font-size: clamp(1.5rem, 3.5vw, 3rem);
+    color: #F8F9F7;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}
+
+body.page-home main section.services-snapshot div.services-snapshot-header a {
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.25rem;
+    text-transform: uppercase;
+    color: #F8F9F7;
+    opacity: 0.45;
     text-decoration: none;
-    text-align: center;
-    display: block;
-    margin: 30px auto;
-    max-width: 95%;
-    transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    border-bottom: 1px solid rgba(248, 249, 247, 0.25);
+    padding-bottom: 2px;
+    transition: opacity 0.2s ease;
 }
 
-.cta-button:hover {
-    background: rgba(0, 0, 0, 0.85);
-    color: #fff;
-    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.4);
-    border-color: rgba(0, 0, 0, 0.8);
+body.page-home main section.services-snapshot div.services-snapshot-header a:hover {
+    opacity: 1;
 }
 
+body.page-home main section.services-snapshot div.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: rgba(248, 249, 247, 0.08);
+}
 
-/* ============================================================
-   5. FEATURES
-   ============================================================ */
-
-.features {
+body.page-home main section.services-snapshot div.services-grid div.service-tile {
+    background: #080607;
+    padding: clamp(1.5rem, 3vw, 2.5rem);
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-    margin: 2rem 0 0;
-}
-
-.feature-card {
+    gap: 0.75rem;
+    transition: background 0.25s ease;
     position: relative;
     overflow: hidden;
+}
+
+body.page-home main section.services-snapshot div.services-grid div.service-tile::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 0;
     background: #F8F9F7;
-    padding: 2rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 2px;
+    transition: height 0.3s ease;
+}
+
+body.page-home main section.services-snapshot div.services-grid div.service-tile:hover::before {
+    height: 100%;
+}
+
+body.page-home main section.services-snapshot div.services-grid div.service-tile:hover {
+    background: rgba(248, 249, 247, 0.04);
+}
+
+body.page-home main section.services-snapshot div.services-grid div.service-tile i.service-tile-icon {
+    font-size: 1.4rem;
+    color: #F8F9F7;
+    opacity: 0.35;
+}
+
+body.page-home main section.services-snapshot div.services-grid div.service-tile p.service-tile-name {
+    font-family: "Special Gothic Expanded One", sans-serif;
+    font-size: clamp(0.85rem, 1.5vw, 1.1rem);
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    color: #F8F9F7;
+}
+
+body.page-home main section.services-snapshot div.services-grid div.service-tile p.service-tile-desc {
+    font-family: "Montserrat", sans-serif;
+    font-size: clamp(0.75rem, 1.2vw, 0.875rem);
+    color: #F8F9F7;
+    opacity: 0.5;
+    line-height: 1.6;
+}
+
+body.page-home main section.services-snapshot div.services-grid div.service-tile p.service-tile-price {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: clamp(1rem, 2vw, 1.4rem);
+    color: #F8F9F7;
+    opacity: 0.6;
+    margin-top: auto;
+}
+
+body.page-home div.booking-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 1100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     opacity: 0;
-    transform: translateX(80px);
-    transition: opacity 1.2s ease, transform 0.6s ease;
-}
-
-.feature-card.visible {
-    opacity: 1;
-    transform: translateX(0);
-}
-
-.feature-number {
-    position:absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 1rem;
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(5rem, 10vw, 8rem);
-    color: rgba(0, 0, 0, 0.06);
-    line-height: 1;
     pointer-events: none;
-    user-select: none;
+    transition: opacity 0.3s ease;
+    padding: 1rem;
 }
 
-.feature-card:nth-child(1) { background: #F8F9F7; }
-.feature-card:nth-child(2) { background: #EDEEE9; }
-.feature-card:nth-child(3) { background: #e0e1dd  ; }
+body.page-home div.booking-modal-overlay.open {
+    opacity: 1;
+    pointer-events: auto;
+}
 
-.feature-card p {
+body.page-home div.booking-modal-overlay div.booking-modal {
+    background: #0f0d0e;
+    border: 1px solid rgba(248, 249, 247, 0.15);
+    width: 100%;
+    max-width: 520px;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: clamp(1.5rem, 4vw, 3rem);
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+    position: relative;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(248, 249, 247, 0.3) transparent;
+}
+
+body.page-home div.booking-modal-overlay div.booking-modal::-webkit-scrollbar {
+    width: 4px;
+}
+
+body.page-home div.booking-modal-overlay div.booking-modal::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+body.page-home div.booking-modal-overlay div.booking-modal::-webkit-scrollbar-thumb {
+    background: rgba(248, 249, 247, 0.3);
+}
+
+body.page-home div.booking-modal-overlay.open div.booking-modal {
+    transform: translateY(0);
+}
+
+body.page-home div.booking-modal-overlay div.booking-modal button.booking-modal-close {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
     background: none;
-    padding: 0;
+    border: none;
+    color: #F8F9F7;
+    font-size: 1.4rem;
+    cursor: pointer;
+    opacity: 0.4;
+    transition: opacity 0.2s ease;
 }
 
+body.page-home div.booking-modal-overlay div.booking-modal button.booking-modal-close:hover {
+    opacity: 1;
+}
 
-/* ============================================================
-   6. MARQUEE
-   ============================================================ */
+body.page-home div.booking-modal-overlay div.booking-modal h3 {
+    font-family: "Special Gothic Expanded One", sans-serif;
+    font-size: clamp(1.1rem, 2.5vw, 1.6rem);
+    color: #F8F9F7;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    margin-bottom: 0.4rem;
+}
+
+body.page-home div.booking-modal-overlay div.booking-modal p.modal-sub {
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.8rem;
+    color: #F8F9F7;
+    opacity: 0.45;
+    margin-bottom: 2rem;
+}
+
+body.page-contact div.form-sub {
+    margin-bottom: 0.3rem;
+}
+
+body.page-home div.booking-modal-overlay div.booking-modal div.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    margin-bottom: 1.1rem;
+}
+
+body.page-home div.booking-modal-overlay div.booking-modal div.form-group label {
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    color: #F8F9F7;
+    opacity: 0.45;
+}
+
+body.page-home div.booking-modal-overlay div.booking-modal div.form-group input,
+body.page-home div.booking-modal-overlay div.booking-modal div.form-group select,
+body.page-home div.booking-modal-overlay div.booking-modal div.form-group textarea {
+    background: rgba(248, 249, 247, 0.05);
+    border: 1px solid rgba(248, 249, 247, 0.15);
+    color: #F8F9F7;
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.875rem;
+    padding: 12px 14px;
+    outline: none;
+    transition: border-color 0.2s ease;
+    width: 100%;
+}
+
+body.page-home div.booking-modal-overlay div.booking-modal div.form-group select option {
+    background: #0f0d0e;
+}
+
+body.page-home div.booking-modal-overlay div.booking-modal div.form-group input:focus,
+body.page-home div.booking-modal-overlay div.booking-modal div.form-group select:focus,
+body.page-home div.booking-modal-overlay div.booking-modal div.form-group textarea:focus {
+    border-color: rgba(248, 249, 247, 0.5);
+}
+
+body.page-home div.booking-modal-overlay div.booking-modal div.form-group textarea {
+    resize: vertical;
+    min-height: 90px;
+}
+
+body.page-home div.booking-modal-overlay div.booking-modal div.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+body.page-home div.booking-modal-overlay div.booking-modal button.form-submit {
+    width: 100%;
+    background: #F8F9F7;
+    color: #080607;
+    border: 2px solid #F8F9F7;
+    font-family: "Special Gothic Expanded One", sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.25rem;
+    text-transform: uppercase;
+    padding: 16px;
+    cursor: pointer;
+    margin-top: 0.75rem;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+body.page-home div.booking-modal-overlay div.booking-modal button.form-submit:hover {
+    background: transparent;
+    color: #F8F9F7;
+}
+
+/* ──────────────────────────────────────────────────────────
+   5. MARQUEE (Homepage)
+   ────────────────────────────────────────────────────────── */
 
 .marquee {
     opacity: 0;
@@ -387,10 +639,9 @@ nav ul li a.active::after {
 
 .marquee p {
     white-space: nowrap;
-    display: block;
     width: 100%;
-    font-size: clamp(0.52rem, 1vw, 3rem);
-    text-align-last: justify;
+    text-align: center;
+    font-size: clamp(0.52rem, 1vw, 2rem);
     color: #F8F9F7;
     opacity: 0.7;
     padding: 20px 0;
@@ -418,7 +669,8 @@ nav ul li a.active::after {
     to { transform: translateX(-50%); }
 }
 
-.gallery-button {
+.gallery-button,
+.gallery-cta-button {
     position: relative;
     z-index: 5;
     background: rgba(30, 25, 17, 0.1);
@@ -432,158 +684,353 @@ nav ul li a.active::after {
     text-decoration: none;
     text-align: center;
     display: block;
-    margin: 40px auto 0px;
+    margin: 40px auto 40px;
     width: 80vw;
     transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
-.gallery-button:hover {
+.gallery-button:hover,
+.gallery-cta-button:hover {
     background: #F8F9F7;
     color: #080607;
     border-color: #F8F9F7;
 }
 
+/* ──────────────────────────────────────────────────────────
+   6. ABOUT PAGE
+   ────────────────────────────────────────────────────────── */
 
-
-/* ============================================================
-   7. ABOUT
-   ============================================================ */
-
-.about {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    align-items: stretch;
-    height: 90vh;
-    padding: 0.5rem 0;
+body.page-about main {
+    padding: 0;
 }
 
-.about h1 {
-    padding: 0.5rem 0;
-}
-
-.about-image-main {
-    height: 100%;
-    min-height: 0;
-}
-
-.about-image-main img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 8px;
-}
-
-.about-side-container {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    gap: 20px;
-    min-height: 0;
-}
-
-.about-accent-images {
-    min-height: 0;
-}
-
-.about-accent-images img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 8px;
-    object-position: center 60%;
-    filter:grayscale(30%) hue-rotate(-5deg);
-}
-
-.about-text p {
-    line-height: clamp(1.2, 2.5vw, 2.2);
-    text-align: justify;
-    font-size: clamp(0.5rem, 2vw + 1rem, 1.5rem);
-    color: #F8F9F7;
+body.page-about section.about-hero {
+    position: relative;
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 4rem 2rem;
+    overflow-x: hidden;
 }
 
 
-/* ============================================================
-   8. SERVICES & TABLES
-   ============================================================ */
-
-.services-pricetables {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 1rem 0;
-}
-
-.services-pricetables h2 {
+body.page-about section.about-hero h1.about-hero-title {
     font-family: "Special Gothic Expanded One", sans-serif;
+    font-size: clamp(1rem, 6vw, 3rem);
+    color: #F8F9F7;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    margin-bottom: 0;
+}
+
+body.page-about section.about-hero div.about-hero-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+body.page-about section.about-hero div.about-hero-content img.about-hero-logo {
+    height: 10rem;
+    opacity: 0.9;
+}
+
+body.page-about section.about-hero div.about-hero-content img.about-hero-wordmark {
+    height: 2.9rem;
+    opacity: 0.9;
+    max-width: 90%;
+}
+
+body.page-about section.about-hero div.about-hero-content p.about-hero-eyebrow {
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.4rem;
     text-transform: uppercase;
     color: #F8F9F7;
-    font-size: clamp(1.5rem, 3.5vw, 3rem);
-    padding: clamp(0.5rem, 0.5vw, 1.5rem) 0;
-    margin-top: 1rem;
+    opacity: 0.4;
 }
 
-table {
+body.page-about section.about-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 40vh;
+    border-top: 1px solid rgba(248, 249, 247, 0.08);
+}
+
+body.page-about section.about-section.reverse {
+    direction: rtl;
+}
+
+body.page-about section.about-section.reverse > * {
+    direction: ltr;
+}
+
+body.page-about section.about-section div.about-section-img {
+    overflow: hidden;
+    position: relative;
+}
+
+body.page-about section.about-section div.about-section-img img {
     width: 100%;
-    table-layout: fixed;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(15%) contrast(105%);
+    transition: transform 0.6s ease;
+}
+
+body.page-about section.about-section div.about-section-img:hover img {
+    transform: scale(1.03);
+}
+
+body.page-about section.about-section div.about-section-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.25rem;
+    padding: clamp(2.5rem, 6vw, 5rem) clamp(2rem, 5vw, 5rem);
+    background: #080607;
+}
+
+body.page-about section.about-section div.about-section-text p.section-label {
+    font-family: "Special Gothic Expanded One", sans-serif;
+    font-size: 0.55rem;
+    letter-spacing: 0.35rem;
+    text-transform: uppercase;
+    color: #F8F9F7;
+    opacity: 0.3;
+}
+
+body.page-about section.about-section div.about-section-text h2 {
+    font-family: "Special Gothic Expanded One", sans-serif;
+    font-size: clamp(1.1rem, 2.2vw, 1.8rem);
+    color: #F8F9F7;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    line-height: 1.1;
+}
+
+body.page-about section.about-section div.about-section-text p.section-body {
+    font-family: "Montserrat", sans-serif;
+    font-size: clamp(0.78rem, 1.1vw, 0.9rem);
+    color: #F8F9F7;
+    opacity: 0.6;
+    line-height: 1.85;
+    text-align: justify;
+}
+
+/* ──────────────────────────────────────────────────────────
+   7. SERVICES PAGE
+   ────────────────────────────────────────────────────────── */
+
+body.page-services main {
+    padding: 0;
+    overflow-x: hidden;
+}
+
+body.page-services div.services-header {
+    padding: clamp(2rem, 4vw, 4rem) 5%;
+    border-bottom: 1px solid rgba(248, 249, 247, 0.08);
+}
+
+body.page-services div.services-header p.services-eyebrow {
+    font-family: "Special Gothic Expanded One", sans-serif;
+    font-size: 0.55rem;
+    letter-spacing: 0.35rem;
+    text-transform: uppercase;
+    color: #F8F9F7;
+    opacity: 0.3;
+    margin-bottom: 0.75rem;
+}
+
+body.page-services div.services-header h1 {
+    font-family: "Special Gothic Expanded One", sans-serif;
+    color: #F8F9F7;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    line-height: 1;
+    margin-bottom: 0.75rem;
+}
+
+body.page-contact input[type="date"] {
+    color: #F8F9F7;
+}
+
+body.page-contact input[type="date"]::-webkit-calendar-picker-indicator {
+    background-color: transparent;
+    filter: invert(1) brightness(100%);
+    cursor: pointer;
+}
+
+body.page-contact input[type="date"]::-webkit-calendar-picker-indicator:hover {
+    opacity: 0.7;
+}
+
+body.page-services div.services-header p.services-note {
+    font-family: "Montserrat", sans-serif;
+    font-size: clamp(0.75rem, 1.1vw, 0.875rem);
+    color: #F8F9F7;
+    opacity: 0.4;
+    max-width: 55ch;
+}
+
+body.page-services section.services-body {
+    padding: clamp(2rem, 4vw, 4rem) 5%;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(3rem, 5vw, 5rem);
+}
+
+body.page-services div.table-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+body.page-services div.table-group-label {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid rgba(248, 249, 247, 0.08);
+}
+
+body.page-services div.table-group-label h2 {
+    font-family: "Special Gothic Expanded One", sans-serif;
+    font-size: clamp(0.9rem, 1.8vw, 1.3rem);
+    color: #F8F9F7;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}
+
+body.page-services div.table-group-label span.table-group-sub {
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.7rem;
+    color: #F8F9F7;
+    opacity: 0.3;
+    letter-spacing: 0.1rem;
+}
+
+body.page-services table {
+    width: 100%;
     border-collapse: collapse;
     font-family: "Montserrat", sans-serif;
     color: #F8F9F7;
-    margin-bottom: 2rem;
 }
 
-thead {
-    border-bottom: 2px solid #F8F9F7;
+body.page-services thead tr {
+    border-bottom: 1px solid rgba(248, 249, 247, 0.2);
 }
 
-th {
-    font-family: "Special Gothic Expanded One", sans-serif;
+body.page-services th {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 0.65rem;
+    letter-spacing: 0.15rem;
     text-transform: uppercase;
-    font-size: clamp(1rem, 1.25vw, 2.5rem);
-    letter-spacing: 0.1rem;
-    padding: clamp(1rem, 2vw, 2rem) 0;
+    color: #F8F9F7;
+    opacity: 0.35;
+    padding-bottom: 0.6rem;
     text-align: left;
 }
 
-td {
-    padding: clamp(0.65rem, 1.5vw, 1.25rem) clamp(0.25rem, 0.5vw, 0.75rem);
-    font-size: clamp(1rem, 2vw, 2.5rem);
-    vertical-align: middle;
-}
-
-tr {
-    border-bottom: 1px solid rgba(248, 249, 247, 0.15);
-}
-
-tr:last-child td {
-    border-bottom: none;
-}
-
-td:first-child {
-    width: 60%;
-}
-
-.price {
+body.page-services th.price {
     text-align: right;
 }
 
-tr:hover td {
-    background-color: rgba(248, 249, 247, 0.05);
+body.page-services td {
+    padding: 0.7rem 0;
+    font-size: clamp(0.78rem, 1.1vw, 0.9rem);
+    border-bottom: 1px solid rgba(248, 249, 247, 0.07);
 }
 
-tr:hover td:first-child {
-    border-right: 1px solid #F8F9F7;
+body.page-services td.price {
+    text-align: right;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: clamp(0.95rem, 1.3vw, 1.1rem);
+    opacity: 0.75;
 }
 
+body.page-services tbody tr:hover td {
+    background: rgba(248, 249, 247, 0.03);
+}
 
-/* ============================================================
-   9. GALLERY & LIGHTBOX
-   ============================================================ */
+body.page-services div.piercing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: rgba(248, 249, 247, 0.08);
+}
+
+body.page-services div.piercing-grid div.piercing-grid-cell {
+    background: #080607;
+    padding: clamp(1rem, 2vw, 1.5rem);
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+body.page-services div.piercing-grid div.piercing-grid-cell p.piercing-cell-label {
+    font-family: "Special Gothic Expanded One", sans-serif;
+    font-size: 0.55rem;
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
+    color: #F8F9F7;
+    opacity: 0.3;
+}
+
+body.page-services div.henna-row {
+    display: flex;
+    gap: 1px;
+    background: rgba(248, 249, 247, 0.08);
+}
+
+body.page-services div.henna-row div.henna-item {
+    background: #080607;
+    flex: 1;
+    padding: clamp(1rem, 2vw, 1.5rem);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+body.page-services div.henna-row div.henna-item p.henna-size {
+    font-family: "Montserrat", sans-serif;
+    font-size: clamp(0.78rem, 1.1vw, 0.9rem);
+    color: #F8F9F7;
+    opacity: 0.65;
+}
+
+body.page-services div.henna-row div.henna-item p.henna-price {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+    color: #F8F9F7;
+    opacity: 0.75;
+}
+
+body.page-services p.services-disclaimer {
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.7rem;
+    color: #F8F9F7;
+    opacity: 0.3;
+    line-height: 1.8;
+    padding: 1.5rem 5% clamp(3rem, 5vw, 5rem);
+    border-top: 1px solid rgba(248, 249, 247, 0.08);
+}
+
+/* ──────────────────────────────────────────────────────────
+   8. GALLERY PAGE
+   ────────────────────────────────────────────────────────── */
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-content: center;
-    align-content: center;
-    grid-gap: clamp(6px, 1vw, 16px);
+    grid-template-columns: repeat(4, 1fr);
+    gap: clamp(6px, 1vw, 16px);
     margin: 1.5rem 0 0;
 }
 
@@ -604,35 +1051,104 @@ tr:hover td:first-child {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center;
     cursor: pointer;
 }
 
-.gallery-cta-button {
+.gallery-filters {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.filter-group {
     position: relative;
-    z-index: 5;
-    background: rgba(30, 25, 17, 0.1);
+}
+
+.filter-group__toggle {
+    padding: 0.5rem 1.5rem;
     border: 2px solid rgba(251, 251, 251, 0.4);
     border-radius: 8px;
+    background: rgba(30, 25, 17, 0.1);
     color: #F8F9F7;
-    padding: 10px 25px;
+    cursor: pointer;
     font-family: "Special Gothic Expanded One", sans-serif;
     text-transform: uppercase;
     letter-spacing: 0.2rem;
-    text-decoration: none;
-    text-align: center;
-    display: block;
-    margin: 40px auto 0px;
-    width: 80vw;
+    font-size: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.filter-group__toggle:hover {
+    background: rgba(248, 249, 247, 0.1);
+    border-color: #F8F9F7;
+}
+
+.filter-group__toggle i {
+    transition: transform 0.2s ease;
+}
+
+.filter-group.open .filter-group__toggle i {
+    transform: rotate(180deg);
+}
+
+.filter-group__options {
+    display: none;
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    left: 0;
+    flex-direction: column;
+    background: #080607;
+    border: 1px solid rgba(251, 251, 251, 0.4);
+    border-radius: 8px;
+    overflow: hidden;
+    z-index: 10;
+    min-width: 100%;
+}
+
+.filter-group.open .filter-group__options {
+    display: flex;
+}
+
+.filter-group__options .filter-btn {
+    border: none;
+    border-bottom: 1px solid rgba(248, 249, 247, 0.1);
+    border-radius: 0;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.filter-btn {
+    padding: 0.5rem 1.5rem;
+    border: 2px solid rgba(251, 251, 251, 0.4);
+    border-radius: 8px;
+    background: rgba(30, 25, 17, 0.1);
+    color: #F8F9F7;
+    cursor: pointer;
+    font-family: "Special Gothic Expanded One", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    font-size: 0.75rem;
     transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
-.gallery-cta-button:hover {
+.filter-btn:hover {
+    background: rgba(248, 249, 247, 0.1);
+    border-color: #F8F9F7;
+}
+
+.filter-btn.active {
     background: #F8F9F7;
     color: #080607;
     border-color: #F8F9F7;
 }
 
+/* Lightbox */
 #lightbox {
     position: fixed;
     z-index: 999;
@@ -650,167 +1166,487 @@ tr:hover td:first-child {
 }
 
 #lightbox.active img {
-    max-width: 80%;
-    max-height: 80vh;
+    max-width: 60%;
+    max-height: 70vh;
     object-fit: contain;
 }
 
-
-/* ============================================================
-   10. CONTACT
-   ============================================================ */
-
-.contact-location h2,
-.contact-hours h2,
-.contact-methods h2 {
-    text-align: left;
-}
-
-.contact-location h2 {
-    padding: 0 2rem;
-}
-
-.contact-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
-    gap: 2rem;
-}
-
-.contact-location {
-    grid-column: 1;
-    grid-row: 1 / 3;
-    border-right: 1px solid rgba(248, 249, 247, 0.15);
-    padding-right: 2rem;
-}
-
-.contact-hours {
-    grid-column: 2;
-    grid-row: 1;
-    padding: 0 2rem 2rem;
-}
-
-.contact-methods {
-    grid-column: 2;
-    grid-row: 2;
-    padding: 2rem;
-}
-
-.contact-methods li a {
-    text-align: justify;
-    text-decoration: none;
+.lb-btn {
+    background: none;
+    border: none;
     color: #F8F9F7;
-}
-
-.map-embed {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    cursor: pointer;
     padding: 1rem;
-    border: 2px solid #F8F9F7;
-    border-radius: 8px;
-    display: block;
-    width: min(90vw, 60vh);
-    margin: 1rem auto;
+    opacity: 0.6;
+    transition: opacity 0.2s ease;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1001;
 }
 
-.map-embed iframe {
+.lb-btn:hover { opacity: 1; }
+.lb-prev { left: 2rem; }
+.lb-next { right: 2rem; }
+
+/* ──────────────────────────────────────────────────────────
+   9. CONTACT PAGE
+   ────────────────────────────────────────────────────────── */
+
+body.page-contact main {
+    padding: 0;
+    overflow-x: hidden;
+}
+
+body.page-contact div.contact-header {
+    padding: clamp(2rem, 4vw, 4rem) 1.6rem clamp(1.25rem, 2vw, 2rem);
+    border-bottom: 1px solid rgba(248, 249, 247, 0.08);
+}
+
+body.page-contact div.contact-header h1 {
+    font-family: "Special Gothic Expanded One", sans-serif;
+    font-size: clamp(1.2rem, 4vh, 2.5rem);
+    color: #F8F9F7;
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+body.page-contact div.contact-body {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    align-items: start;
+}
+
+body.page-contact div.contact-left {
+    border-right: 1px solid rgba(248, 249, 247, 0.08);
+    display: flex;
+    flex-direction: column;
+    padding: clamp(1.5rem, 3vw, 2.5rem) 5%;
+    gap: 2rem;
+    position: sticky;
+    top: 0;
+}
+
+body.page-contact div.contact-map {
+    border: 1px solid rgba(248, 249, 247, 0.2);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+body.page-contact div.contact-map iframe {
     filter: invert(100%) hue-rotate(180deg);
     display: block;
     width: 100%;
-    aspect-ratio: 1;
-    border-radius: 4px;
+    aspect-ratio: 4 / 3;
+    border: none;
 }
 
-address {
+body.page-contact div.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+body.page-contact div.contact-block {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+body.page-contact div.contact-block p.contact-block-label {
+    font-family: "Special Gothic Expanded One", sans-serif;
+    font-size: 0.55rem;
+    letter-spacing: 0.35rem;
+    text-transform: uppercase;
+    color: #F8F9F7;
+    opacity: 0.3;
+}
+
+body.page-contact div.contact-block address,
+body.page-contact div.contact-block p.contact-hours-text {
     font-family: "Montserrat", sans-serif;
     font-style: normal;
+    font-size: clamp(0.75rem, 1vw, 0.875rem);
     color: #F8F9F7;
-    font-size: clamp(0.875rem, 1.8vw, 1.125rem);
-    text-align: justify;
-    line-height: 2;
-    margin-top: 1rem;
-    padding: 0 1.6rem;
+    opacity: 0.55;
+    line-height: 1.85;
 }
 
-.contact-hours p {
-    font-family: "Montserrat", sans-serif;
-    color: #F8F9F7;
-    font-size: clamp(1rem, 1.5vw, 1.125rem);
-    line-height: 2;
-}
-
-.contact-methods ul {
+body.page-contact div.contact-block ul.contact-links {
     list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+body.page-contact div.contact-block ul.contact-links li a {
     font-family: "Montserrat", sans-serif;
+    font-size: clamp(0.75rem, 1vw, 0.875rem);
     color: #F8F9F7;
-    font-size: clamp(0.875rem, 1.8vw, 1.125rem);
-    line-height: 2;
-}
-
-
-/* ============================================================
-   11. FOOTER
-   ============================================================ */
-
-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 0.75rem;
-    color: #F8F9F7;
-    padding: 1.5rem 5%;
-    margin-top: 1.5rem;
-    border-top: 1px solid rgba(248, 249, 247, 0.15);
-    text-align: center;
-}
-
-.footer-socials {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.footer-socials__label {
-    font-family: "Special Gothic Expanded One", sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 0.2rem;
-    font-size: 0.75rem;
-    opacity: 0.6;
-}
-
-footer ul {
-    list-style: none;
-    display: flex;
-    gap: 15px;
-}
-
-footer ul li a i {
-    font-size: 1.2rem;
-    opacity: 0.7;
+    opacity: 0.55;
+    text-decoration: none;
     transition: opacity 0.2s ease;
 }
 
-footer ul li a:hover i {
+body.page-contact div.contact-block ul.contact-links li a:hover {
     opacity: 1;
 }
 
-.footer-copyright {
+body.page-contact div.contact-right {
+    padding: clamp(1.5rem, 3vw, 2.5rem) 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+}
+
+body.page-contact div.contact-right p.form-eyebrow {
+    font-family: "Special Gothic Expanded One", sans-serif;
+    font-size: 0.55rem;
+    letter-spacing: 0.35rem;
+    text-transform: uppercase;
+    color: #F8F9F7;
+    opacity: 0.3;
+}
+
+body.page-contact div.contact-right h2 {
+    font-family: "Special Gothic Expanded One", sans-serif;
+    font-size: clamp(1.1rem, 2.2vw, 1.8rem);
+    color: #F8F9F7;
+    text-transform: uppercase;
+    line-height: 1.1;
+}
+
+body.page-contact div.contact-right p.form-sub {
     font-family: "Montserrat", sans-serif;
-    font-size: 0.7rem;
+    font-size: clamp(0.72rem, 1vw, 0.82rem);
+    color: #F8F9F7;
+    opacity: 0.4;
+    line-height: 1.7;
+}
+
+body.page-contact div.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+body.page-contact div.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+body.page-contact div.form-group label {
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    color: #F8F9F7;
     opacity: 0.4;
 }
 
-/* ============================================================
-   12. MEDIA QUERIES
-   ============================================================ */
+body.page-contact div.form-group input,
+body.page-contact div.form-group select,
+body.page-contact div.form-group textarea {
+    background: rgba(248, 249, 247, 0.05);
+    border: 1px solid rgba(248, 249, 247, 0.15);
+    color: #F8F9F7;
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.875rem;
+    padding: 11px 14px;
+    outline: none;
+    transition: border-color 0.2s ease;
+    width: 100%;
+}
 
+body.page-contact div.form-group select option {
+    background: #0f0d0e;
+}
+
+body.page-contact div.form-group input:focus,
+body.page-contact div.form-group select:focus,
+body.page-contact div.form-group textarea:focus {
+    border-color: rgba(248, 249, 247, 0.5);
+}
+
+body.page-contact div.form-group textarea {
+    resize: vertical;
+    min-height: 90px;
+}
+
+body.page-contact button.contact-submit {
+    background: #F8F9F7;
+    color: #080607;
+    border: 2px solid #F8F9F7;
+    font-family: "Special Gothic Expanded One", sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.25rem;
+    text-transform: uppercase;
+    padding: 15px;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.2s ease, color 0.2s ease;
+    margin-top: 0.25rem;
+}
+
+body.page-contact button.contact-submit:hover {
+    background: transparent;
+    color: #F8F9F7;
+}
+
+/* ──────────────────────────────────────────────────────────
+   10. FOOTER
+   ────────────────────────────────────────────────────────── */
+
+footer.site-footer {
+    background: #080607;
+    border-top: 1px solid rgba(248,249,247,0.1);
+    padding: clamp(3rem, 5vw, 5rem) 0 0;
+    color: #F8F9F7;
+    display: flex;
+    flex-direction: column;
+}
+
+/* top section: logo col + 3 link/info columns */
+footer.site-footer div.footer-top {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr 1fr;
+    gap: clamp(5rem, 8vw, 9rem);
+    padding: 0 5% clamp(2.5rem, 5vw, 4rem);
+}
+
+/* ── logo column ── */
+footer.site-footer div.footer-brand {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+footer.site-footer div.footer-brand a.footer-logo {
+    display: flex;
+    justify-content: center;
+}
+
+footer.site-footer div.footer-brand a.footer-logo img {
+    height: 5.75rem;
+    filter: invert(0);
+    opacity: 0.9;
+    display: block;
+    transition: opacity 0.2s ease;
+}
+
+footer.site-footer div.footer-brand > img {
+    height: 2rem;
+    opacity: 0.6;
+    display: block;
+    margin: 0 auto;
+}
+
+footer.site-footer div.footer-brand a.footer-logo:hover img {
+    opacity: 1;
+}
+
+footer.site-footer div.footer-brand p.footer-tagline {
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.8rem;
+    line-height: 1.8;
+    color: #F8F9F7;
+    opacity: 0.45;
+    margin: 0;
+    max-width: 26ch;
+}
+
+footer.site-footer div.footer-brand div.footer-socials {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-top: 0.25rem;
+}
+
+footer.site-footer div.footer-brand div.footer-socials p.footer-col-label {
+    font-family: "Special Gothic Expanded One", sans-serif;
+    font-size: 0.55rem;
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
+    color: #F8F9F7;
+    opacity: 0.3;
+    margin: 0;
+}
+
+footer.site-footer div.footer-brand div.footer-socials ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+footer.site-footer div.footer-brand div.footer-socials ul li a {
+    color: #F8F9F7;
+    opacity: 0.45;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+    display: flex;
+    align-items: center;
+}
+
+footer.site-footer div.footer-brand div.footer-socials ul li a:hover {
+    opacity: 1;
+}
+
+/* ── shared column styles ── */
+footer.site-footer div.footer-col {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+footer.site-footer div.footer-col p.footer-col-label {
+    font-family: "Special Gothic Expanded One", sans-serif;
+    font-size: 0.55rem;
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
+    color: #F8F9F7;
+    opacity: 0.3;
+    margin: 0;
+}
+
+/* nav links column */
+footer.site-footer div.footer-col ul.footer-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+footer.site-footer div.footer-col ul.footer-nav li a {
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: #F8F9F7;
+    opacity: 0.55;
+    text-decoration: none;
+    letter-spacing: 0.03rem;
+    transition: opacity 0.2s ease;
+    text-align: justify;
+}
+
+footer.site-footer div.footer-col ul.footer-nav li a:hover {
+    opacity: 1;
+}
+
+/* info text (address, hours) */
+footer.site-footer div.footer-col p.footer-col-text {
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.8rem;
+    line-height: 1.9;
+    color: #F8F9F7;
+    opacity: 0.5;
+    margin: 0;
+    text-align: justify;
+}
+
+footer.site-footer div.footer-col a.footer-col-link {
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.8rem;
+    color: #F8F9F7;
+    opacity: 0.5;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    transition: opacity 0.2s ease;
+    margin-top: -0.25rem;
+}
+
+footer.site-footer div.footer-col a.footer-col-link:hover {
+    opacity: 1;
+}
+
+/* ── bottom bar ── */
+footer.site-footer div.footer-bottom {
+    padding: 1.5rem 5% 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+footer.site-footer hr {
+    border: none;
+    border-top: 1px solid rgba(248,249,247,0.08);
+    width: 100%;
+}
+
+footer.site-footer div.footer-bottom p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.68rem;
+    color: #F8F9F7;
+    opacity: 0.35;
+    margin: 0;
+    padding: 0;
+}
+
+/* ── MOBILE: 2-column grid ── */
 @media (max-width: 768px) {
-    .hamburger {
-        display: block;
-        background: none;
-        border: none;
-        font-size: 2rem;
-        cursor: pointer;
+    footer.site-footer div.footer-top {
+        grid-template-columns: 1fr 1fr;
+        gap: clamp(1.5rem, 4vw, 4rem);
     }
 
+    footer.site-footer div.footer-col {
+        text-align: left;
+        align-items: flex-start;
+    }
+
+    footer.site-footer div.footer-col p.footer-col-text {
+        text-align: justify;
+    }
+
+    /* brand spans full width on mobile */
+    footer.site-footer div.footer-brand {
+        text-align: left;
+        align-items: flex-start;
+    }
+
+    footer.site-footer div.footer-brand a.footer-logo {
+        justify-content: flex-start;
+    }
+
+    footer.site-footer div.footer-brand > img {
+        margin: 0;
+    }
+
+    footer.site-footer div.footer-brand a.footer-logo img {
+        height: 3.5rem;
+    }
+
+    footer.site-footer div.footer-brand div.footer-socials {
+        align-items: flex-start;
+    }
+
+    footer.site-footer div.footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.35rem;
+        grid-column: 1 / -1;
+    }
+}
+
+/* ──────────────────────────────────────────────────────────
+   11. MEDIA QUERIES
+   ────────────────────────────────────────────────────────── */
+
+@media (max-width: 768px) {
+    /* Navigation */
     nav ul {
         position: fixed;
         top: 0;
@@ -823,7 +1659,6 @@ footer ul li a:hover i {
         gap: 2rem;
         padding: 5.5rem 2rem;
         transition: right 0.3s ease;
-        display: flex;
         z-index: 1000;
     }
 
@@ -838,8 +1673,6 @@ footer ul li a:hover i {
         letter-spacing: 0.3rem;
         opacity: 0.3;
         text-transform: uppercase;
-        border-bottom: none !important;
-        padding-bottom: 0 !important;
         margin-bottom: -0.5rem;
     }
 
@@ -861,113 +1694,215 @@ footer ul li a:hover i {
         display: none;
     }
 
-    nav ul.open li a.active {
-        opacity: 1;
-    
+    .hamburger {
+        display: block;
     }
 
-    nav ul.open li a.active::after {
+    /* Homepage Hero */
+    body.page-home main section.hero {
+        grid-template-columns: 1fr;
+        min-height: 85vh;
+        padding: 0 5%;
+    }
+
+    body.page-home main section.hero div.hero-right {
         display: none;
     }
 
-    .hero h1 {
-        white-space: normal;
-        font-size: clamp(1.8rem, 7vw, 5rem);
-        margin: 0;
+    body.page-home main section.hero > img.hero-bg-img {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.35;
+        filter: grayscale(0.5);
+        z-index: 1;
+    }
+
+    body.page-home main section.hero div.hero-left {
+        position: relative;
+        z-index: 2;
+        padding: 3rem 0;
+        align-items: center;
         text-align: center;
     }
 
-    .hero p {
-        margin: 0;
+    body.page-home main section.hero div.hero-left h1 span.no-wrap {
+        white-space: normal;
     }
 
-    .hero img {
-        object-position: 30% 40%;
+    body.page-home main section.hero div.hero-left div.hero-actions {
+        justify-content: center;
     }
 
-    .about {
-        grid-template-columns: 1fr;
-    }
-
-    .about {
-        height: auto;
-        min-height: 0;
-    }
-
-    .about-text p {
-        font-size: clamp(0.5rem, 2.5vw, 0.85rem);
-        line-height: 1.4;
-    }
-
-    .emphasized {
-        font-size: clamp(0.6rem, 3vw, 1rem);
-    }
-
-    .about-side-container {
-        grid-template-rows: auto;
-        height: auto;
-    }
-
-    .contact-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .contact-location,
-    .contact-hours,
-    .contact-methods {
-        grid-column: 1;
-        grid-row: auto;
-    }
-
-    .contact-location {
-        border-right: none;
-        padding-right: 0;
-    }
-
-    .contact-hours {
-        border-bottom: none;
-        padding-bottom: 0;
-    }
-}
-
-@media (min-width: 768px) {
-    .services-pricetables h2 {
-        font-size: clamp(1rem, 2vw, 1.5rem);
-    }
-
-    th {
-        font-size: clamp(0.7rem, 1vw, 1rem);
-    }
-
-    td {
-        font-size: clamp(0.8rem, 1.2vw, 1.1rem);
-    }
-
-    .services-pricetables {
+    /* Trust Bar */
+    body.page-home main div.trust-bar {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 2rem;
-        align-items: stretch;
+        gap: 1.25rem 1.5rem;
+        justify-items: center;
+        padding: 1.75rem 5%;
     }
 
-    .services-pricetables h1,
-    .services-pricetables h2 {
-        grid-column: 1 / -1;
+    body.page-home main div.trust-bar div.trust-item span {
+        white-space: normal;
+        font-size: clamp(0.6rem, 2.5vw, 0.75rem);
+        letter-spacing: 0.1rem;
     }
 
-    .table-group {
-        display: flex;
+    /* Services Snapshot */
+    body.page-home main section.services-snapshot div.services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* About Page */
+
+    body.page-about section.about-hero {
+        padding: 3rem 1rem;
+    }
+
+    body.page-about section.about-hero div.about-hero-content {
+        gap: 0.8rem;
+    }
+
+    body.page-about section.about-hero div.about-hero-content img.about-hero-logo {
+        height: 8rem;
+    }
+
+    body.page-about section.about-hero div.about-hero-content img.about-hero-wordmark {
+        height: 2.8rem;
+    }
+
+    body.page-about section.about-hero div.about-hero-content p.about-hero-eyebrow {
+        padding: 1rem 0 0;
+    }
+
+    body.page-about section.about-section {
+        grid-template-columns: 1fr;
+        min-height: unset;
+    }
+
+    body.page-about section.about-section.reverse {
+        direction: ltr;
+    }
+
+    body.page-about section.about-section div.about-section-img {
+        min-height: 240px;
+    }
+
+    body.page-about section.about-section div.about-section-text {
+        margin: 0;
+        padding: 2rem 5%;
+    }
+
+    body.page-about section#about-story div.about-section-img {
+        display: none;
+    }
+
+    /* Services Page */
+    body.page-services div.piercing-grid {
+        grid-template-columns: 1fr;
+    }
+
+    body.page-services div.henna-row {
         flex-direction: column;
     }
 
-    .table-group table {
-        flex: 1;
+    body.page-services div.piercing-grid div.piercing-grid-cell {
+        padding: 1rem 0;
     }
 
-    footer {
-        flex-direction: row;
-        justify-content: space-between;
+    /* Gallery */
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Contact Page */
+    body.page-contact div.contact-body {
+        grid-template-columns: 1fr;
+    }
+
+    body.page-contact div.contact-left {
+        border-right: none;
+        border-bottom: 1px solid rgba(248, 249, 247, 0.08);
+        position: static;
+        padding: 1.5rem 5%;
+        gap: 1.5rem;
+    }
+
+    body.page-contact div.contact-map iframe {
+        aspect-ratio: 16 / 9;
+    }
+
+    body.page-contact div.contact-info {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.25rem;
+        align-items: start;
+    }
+
+    body.page-contact div.contact-right {
+        padding: 1.5rem 5%;
+    }
+
+    body.page-contact div.form-row {
+        grid-template-columns: 1fr;
+    }
+
+    /* Footer */
+    footer.site-footer div.footer-top {
+        grid-template-columns: 1fr 1fr;
+        gap: clamp(1.5rem, 4vw, 4rem);
+    }
+
+    footer.site-footer div.footer-brand {
         text-align: left;
+        align-items: flex-start;
+    }
+
+    footer.site-footer div.footer-brand a.footer-logo {
+        justify-content: flex-start;
+    }
+
+    footer.site-footer div.footer-brand a.footer-logo img {
+        height: 3.5rem;
+    }
+
+    footer.site-footer div.footer-brand div.footer-socials {
+        align-items: flex-start;
+    }
+
+    footer.site-footer div.footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.35rem;
+    }
+
+    /* Floating Button */
+    body.page-home button.book-now-float {
+        bottom: 1.25rem;
+        right: 1.25rem;
+        padding: 12px 18px;
+    }
+
+    /* Modal */
+    body.page-home div.booking-modal-overlay div.booking-modal div.form-row {
+        grid-template-columns: 1fr;
     }
 }
 
+@media (min-width: 769px) {
+    body.page-services table.pricetable-tattoos td:first-child,
+    body.page-services table.pricetable-tattoos th:first-child {
+        width: 50%;
+    }
+
+    body.page-contact div.contact-info {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+}
