@@ -363,7 +363,7 @@ body.page-home main section.services-snapshot {
 body.page-home main section.services-snapshot div.services-snapshot-header {
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
     margin-bottom: 2.5rem;
     flex-wrap: wrap;
     gap: 1rem;
