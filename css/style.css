@@ -13,7 +13,20 @@
 }
 
 html {
+    font-size: 14px;
     scroll-behavior: smooth;
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    html {
+        font-size: 11px;
+    }
 }
 
 body {
@@ -316,7 +329,7 @@ body.page-home main section.hero div.hero-right img {
     height: 100%;
     object-fit: cover;
     object-position: center 30%;
-    filter: grayscale(0.7) contrast(110%);
+    filter: grayscale(0.9) contrast(110%);
     opacity: 0.8;
 }
 
@@ -1724,7 +1737,7 @@ footer.site-footer div.footer-bottom p {
         height: 100%;
         object-fit: cover;
         opacity: 0.35;
-        filter: grayscale(0.5);
+        filter: grayscale(0.8);
         z-index: 1;
     }
 
