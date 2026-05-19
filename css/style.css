@@ -1659,7 +1659,12 @@ footer.site-footer div.footer-bottom p {
         gap: 2rem;
         padding: 5.5rem 2rem;
         transition: right 0.3s ease;
+<<<<<<< HEAD
         z-index: 1000;
+=======
+        display: flex;
+        z-index: 1001;
+>>>>>>> 6482b0bbf98b6e401bcf0af34292d0732d89ef14
     }
 
     nav ul.open {
@@ -1680,6 +1685,11 @@ footer.site-footer div.footer-bottom p {
         font-size: clamp(1.5rem, 4vw, 2.5rem);
         opacity: 0.5;
     }
+
+   nav ul li a::hover {
+      opacity: 1;
+      /* new change remove if error */
+   }
 
     nav ul li {
         border-bottom: 1px solid rgba(248, 249, 247, 0.15);
