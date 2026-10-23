@@ -342,6 +342,17 @@ if (marquee) marqueeObserver.observe(marquee)
     const navList = document.querySelector('nav ul')
     let bookBtn = null
     if (navList) {
+        // Log In link, sits just before Book Now
+        const loginLi = document.createElement('li')
+        loginLi.className = 'nav-login'
+        loginLi.innerHTML = '<a href="login.html" class="nav-login-btn">Log In</a>'
+        navList.appendChild(loginLi)
+        if (/login(\.html)?$/.test(window.location.pathname)) {
+            const a = loginLi.querySelector('a')
+            a.classList.add('active')
+            a.setAttribute('aria-current', 'page')
+        }
+
         const li = document.createElement('li')
         li.className = 'nav-book'
         li.innerHTML = '<button type="button" class="nav-book-btn">Book Now</button>'

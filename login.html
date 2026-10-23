@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Log in or sign up to Rakistattoo & Body Piercing to keep track of your bookings and save your favorite designs.">
+    <title>Log In — Rakistattoo</title>
+    <link rel="icon" type="image/png" href="images/thumbnails/favicon.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Fascinate&family=Permanent+Marker&family=Rubik+Marker+Hatch&family=Special+Elite&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="page-auth">
+
+    <header>
+        <div class="brand">
+            <a href="index.html">
+                <img src="images/brand.svg" alt="Rakistattoo & Body Piercing logo">
+            </a>
+        </div>
+        <nav class="navigation">
+            <ul>
+                <li class="nav-label">Navigation</li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button class="hamburger" aria-label="Open menu">
+                <i class="bi bi-list"></i>
+            </button>
+        </nav>
+        <hr>
+    </header>
+
+    <main>
+        <section class="auth">
+
+            <!-- LEFT: image + welcome copy (text swaps with the toggle) -->
+            <div class="auth-visual">
+                <img class="auth-visual-img" src="images/full-res/'images/full-res/logcover (3).jpeg'," alt="" aria-hidden="true">
+                <div class="auth-visual-content">
+                    <p class="auth-eyebrow">Rakistattoo & Body Piercing</p>
+                    <h1 class="auth-title">Welcome back.</h1>
+                    <p class="auth-text">Pick up where you left off. Your bookings and saved designs are waiting.</p>
+                    <ul class="auth-perks">
+                        <li><i class="bi bi-calendar-check"></i><span>Booking history</span></li>
+                        <li><i class="bi bi-heart"></i><span>Liked designs</span></li>
+                        <li><i class="bi bi-lightning-charge"></i><span>Faster booking</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- RIGHT: toggle + forms -->
+            <div class="auth-form-side">
+                <div class="auth-box">
+
+                    <div class="auth-tabs" role="tablist" aria-label="Account" data-active="login">
+                        <span class="auth-tab-indicator" aria-hidden="true"></span>
+                        <button type="button" class="auth-tab" role="tab" id="tab-login" data-tab="login" aria-controls="panel-login" aria-selected="true">Log In</button>
+                        <button type="button" class="auth-tab" role="tab" id="tab-signup" data-tab="signup" aria-controls="panel-signup" aria-selected="false" tabindex="-1">Sign Up</button>
+                    </div>
+
+                    <div class="auth-panels no-anim">
+
+                    <!-- LOG IN -->
+                    <div class="auth-panel is-active" id="panel-login" role="tabpanel" aria-labelledby="tab-login">
+                        <div class="auth-panel-head">
+                            <p class="auth-panel-eyebrow">Returning</p>
+                            <h2>Log in</h2>
+                            <p class="auth-panel-sub">Enter your details to get into your account.</p>
+                        </div>
+
+                        <form class="auth-form" novalidate>
+                            <div class="auth-field">
+                                <label for="login-email">Email Address</label>
+                                <input type="email" id="login-email" name="email" placeholder="juan@email.com" autocomplete="email">
+                            </div>
+
+                            <div class="auth-field">
+                                <div class="auth-label-row">
+                                    <label for="login-password">Password</label>
+                                    <a href="#" class="auth-forgot">Forgot password?</a>
+                                </div>
+                                <div class="password-wrap">
+                                    <input type="password" id="login-password" name="password" placeholder="Your password" autocomplete="current-password">
+                                    <button type="button" class="pw-toggle" aria-label="Show password" aria-pressed="false"><i class="bi bi-eye"></i></button>
+                                </div>
+                            </div>
+
+                            <label class="auth-check">
+                                <input type="checkbox" name="remember">
+                                <span>Keep me logged in</span>
+                            </label>
+
+                            <p class="auth-note" role="status" aria-live="polite"></p>
+
+                            <button type="submit" class="auth-submit">Log In</button>
+                        </form>
+
+                        <p class="auth-switch">No account yet? <a href="#signup" data-switch="signup">Sign up</a></p>
+                    </div>
+
+                    <!-- SIGN UP -->
+                    <div class="auth-panel" id="panel-signup" role="tabpanel" aria-labelledby="tab-signup">
+                        <div class="auth-panel-head">
+                            <p class="auth-panel-eyebrow">New here</p>
+                            <h2>Sign up</h2>
+                            <p class="auth-panel-sub">Just the basics. It only takes a minute.</p>
+                        </div>
+
+                        <form class="auth-form" novalidate>
+                            <div class="auth-field">
+                                <label for="signup-name">Full Name</label>
+                                <input type="text" id="signup-name" name="name" placeholder="Juan Dela Cruz" autocomplete="name">
+                            </div>
+
+                            <div class="auth-field">
+                                <label for="signup-email">Email Address</label>
+                                <input type="email" id="signup-email" name="email" placeholder="juan@email.com" autocomplete="email">
+                            </div>
+
+                            <div class="auth-field">
+                                <label for="signup-password">Password</label>
+                                <div class="password-wrap">
+                                    <input type="password" id="signup-password" name="password" placeholder="Create a password" autocomplete="new-password">
+                                    <button type="button" class="pw-toggle" aria-label="Show password" aria-pressed="false"><i class="bi bi-eye"></i></button>
+                                </div>
+                            </div>
+
+                            <div class="auth-field">
+                                <label for="signup-confirm">Confirm Password</label>
+                                <div class="password-wrap">
+                                    <input type="password" id="signup-confirm" name="confirm" placeholder="Repeat your password" autocomplete="new-password">
+                                    <button type="button" class="pw-toggle" aria-label="Show password" aria-pressed="false"><i class="bi bi-eye"></i></button>
+                                </div>
+                            </div>
+
+                            <p class="auth-note" role="status" aria-live="polite"></p>
+
+                            <button type="submit" class="auth-submit">Create Account</button>
+                        </form>
+
+                        <p class="auth-switch">Already have an account? <a href="#login" data-switch="login">Log in</a></p>
+                    </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <a href="index.html" class="footer-logo">
+                    <img src="images/full-res/logow.webp" alt="Rakistattoo & Body Piercing">
+                </a>
+                <img src="images/brand.svg" class="brand-svg" alt="Rakistattoo">
+                <div class="footer-socials">
+                    <ul>
+                        <li>
+                            <a href="https://www.facebook.com/rakistattoo/" aria-label="Facebook" target="_blank" rel="noopener">
+                                <i class="bi bi-facebook"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/rakistattoo/" aria-label="Instagram" target="_blank" rel="noopener">
+                                <i class="bi bi-instagram"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.tiktok.com/@rakistattoo" aria-label="TikTok" target="_blank" rel="noopener">
+                                <i class="bi bi-tiktok"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <p class="footer-col-label">Navigate</p>
+                <ul class="footer-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="login.html">Log In</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <p class="footer-col-label">Find Us</p>
+                <p class="footer-col-text">
+                    4th Floor Ayala Malls Feliz<br>
+                    Brgy. Dela Paz, Pasig City<br>
+                    Metro Manila, Philippines
+                </p>
+                <a class="footer-col-link"
+                    href="https://maps.google.com/?q=Ayala+Malls+Feliz+Pasig"
+                    target="_blank"
+                    rel="noopener">
+                    <i class="bi bi-box-arrow-up-right" style="font-size:0.7rem;"></i>
+                    Get Directions
+                </a>
+            </div>
+
+            <div class="footer-col">
+                <p class="footer-col-label">Hours</p>
+                <p class="footer-col-text">
+                    Mon – Fri<br>
+                    11:00 AM – 8:00 PM<br>
+                    <br>
+                    Sat – Sun<br>
+                    10:00 AM – 8:00 PM<br>
+                    <br>
+                </p>
+            </div>
+        </div>
+
+        <hr>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Rakistattoo. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <div class="backdrop"></div>
+
+    <script src="js/script.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+</html>
