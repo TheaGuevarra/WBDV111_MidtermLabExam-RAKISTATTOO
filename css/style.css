@@ -43,7 +43,6 @@ body::before {
     background-image: url('images/bg-texture.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    background-attachment: fixed;
     z-index: -1;
     filter: brightness(0.8) opacity(0.5) contrast(150%);
 }
@@ -715,6 +714,8 @@ div.booking-modal-overlay div.booking-modal button.form-submit:hover {
     width: max-content;
     margin: 1rem;
     animation: marquee-animate 30s linear infinite;
+    will-change: transform;
+
 }
 
 .marquee-content img {
