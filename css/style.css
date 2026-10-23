@@ -117,8 +117,8 @@ header {
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
-    align-items: flex-end;
-    background: #080607;
+    align-items: center;
+    padding: clamp(12px, 1.4vw, 18px) clamp(16px, 3vw, 48px);
 }
 
 header a {
@@ -137,10 +137,15 @@ header hr {
     font-size: clamp(2rem, 5vw, 4rem);
     font-weight: 500;
     letter-spacing: 1px;
-    padding: clamp(10px, 1vw, 14px) clamp(16px, 1.5vw, 20px) clamp(0px, 0.5vw, 4px);
+    padding: 0;
+}
+
+.brand a {
+    display: flex;
 }
 
 .brand img {
+    display: block;
     height: clamp(2rem, 3vw, 3.5rem);
     width: auto;
 }
@@ -148,13 +153,14 @@ header hr {
 .navigation {
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
-    padding: 0 1.5% 1.5%;
+    align-items: center;
+    padding: 0;
 }
 
 nav ul {
     display: flex;
-    gap: clamp(3.5rem, 5vw, 10rem);
+    gap: clamp(1.75rem, 3.5vw, 4rem);
+    align-items: center;
     list-style: none;
     color: #F8F9F7;
     font-family: "Montserrat", sans-serif;
@@ -166,7 +172,7 @@ nav ul {
 nav ul li a {
     display: inline-block;
     position: relative;
-    padding-bottom: 0.5rem;
+    padding: 0.5rem 0;
     line-height: 1;
 }
 
@@ -214,7 +220,8 @@ body.page-home main section.hero {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    min-height: 92vh;
+    min-height: 100vh;
+    min-height: 100svh;
     background-color: #080607;
     color: #F8F9F7;
     overflow: hidden;
@@ -229,7 +236,7 @@ body.page-home main section.hero div.hero-left {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    padding: clamp(2rem, 6vw, 6rem) clamp(2rem, 5vw, 5rem);
+    padding: calc(clamp(2rem, 6vw, 6rem) + 3rem) clamp(2rem, 5vw, 5rem) clamp(2rem, 6vw, 6rem);
     position: relative;
     z-index: 2;
 }
@@ -508,7 +515,7 @@ body.page-home main section.services-snapshot div.services-grid div.service-tile
     margin-top: auto;
 }
 
-body.page-home div.booking-modal-overlay {
+div.booking-modal-overlay {
     position: fixed;
     inset: 0;
     background: rgba(0, 0, 0, 0.85);
@@ -522,12 +529,12 @@ body.page-home div.booking-modal-overlay {
     padding: 1rem;
 }
 
-body.page-home div.booking-modal-overlay.open {
+div.booking-modal-overlay.open {
     opacity: 1;
     pointer-events: auto;
 }
 
-body.page-home div.booking-modal-overlay div.booking-modal {
+div.booking-modal-overlay div.booking-modal {
     background: #0f0d0e;
     border: 1px solid rgba(248, 249, 247, 0.15);
     width: 100%;
@@ -542,23 +549,23 @@ body.page-home div.booking-modal-overlay div.booking-modal {
     scrollbar-color: rgba(248, 249, 247, 0.3) transparent;
 }
 
-body.page-home div.booking-modal-overlay div.booking-modal::-webkit-scrollbar {
+div.booking-modal-overlay div.booking-modal::-webkit-scrollbar {
     width: 4px;
 }
 
-body.page-home div.booking-modal-overlay div.booking-modal::-webkit-scrollbar-track {
+div.booking-modal-overlay div.booking-modal::-webkit-scrollbar-track {
     background: transparent;
 }
 
-body.page-home div.booking-modal-overlay div.booking-modal::-webkit-scrollbar-thumb {
+div.booking-modal-overlay div.booking-modal::-webkit-scrollbar-thumb {
     background: rgba(248, 249, 247, 0.3);
 }
 
-body.page-home div.booking-modal-overlay.open div.booking-modal {
+div.booking-modal-overlay.open div.booking-modal {
     transform: translateY(0);
 }
 
-body.page-home div.booking-modal-overlay div.booking-modal button.booking-modal-close {
+div.booking-modal-overlay div.booking-modal button.booking-modal-close {
     position: absolute;
     top: 1.25rem;
     right: 1.25rem;
@@ -571,11 +578,11 @@ body.page-home div.booking-modal-overlay div.booking-modal button.booking-modal-
     transition: opacity 0.2s ease;
 }
 
-body.page-home div.booking-modal-overlay div.booking-modal button.booking-modal-close:hover {
+div.booking-modal-overlay div.booking-modal button.booking-modal-close:hover {
     opacity: 1;
 }
 
-body.page-home div.booking-modal-overlay div.booking-modal h3 {
+div.booking-modal-overlay div.booking-modal h3 {
     font-family: "Special Gothic Expanded One", sans-serif;
     font-size: clamp(1.1rem, 2.5vw, 1.6rem);
     color: #F8F9F7;
@@ -584,7 +591,7 @@ body.page-home div.booking-modal-overlay div.booking-modal h3 {
     margin-bottom: 0.4rem;
 }
 
-body.page-home div.booking-modal-overlay div.booking-modal p.modal-sub {
+div.booking-modal-overlay div.booking-modal p.modal-sub {
     font-family: "Montserrat", sans-serif;
     font-size: 0.8rem;
     color: #F8F9F7;
@@ -596,14 +603,14 @@ body.page-contact div.form-sub {
     margin-bottom: 0.3rem;
 }
 
-body.page-home div.booking-modal-overlay div.booking-modal div.form-group {
+div.booking-modal-overlay div.booking-modal div.form-group {
     display: flex;
     flex-direction: column;
     gap: 0.4rem;
     margin-bottom: 1.1rem;
 }
 
-body.page-home div.booking-modal-overlay div.booking-modal div.form-group label {
+div.booking-modal-overlay div.booking-modal div.form-group label {
     font-family: "Montserrat", sans-serif;
     font-size: 0.65rem;
     font-weight: 700;
@@ -613,9 +620,9 @@ body.page-home div.booking-modal-overlay div.booking-modal div.form-group label 
     opacity: 0.45;
 }
 
-body.page-home div.booking-modal-overlay div.booking-modal div.form-group input,
-body.page-home div.booking-modal-overlay div.booking-modal div.form-group select,
-body.page-home div.booking-modal-overlay div.booking-modal div.form-group textarea {
+div.booking-modal-overlay div.booking-modal div.form-group input,
+div.booking-modal-overlay div.booking-modal div.form-group select,
+div.booking-modal-overlay div.booking-modal div.form-group textarea {
     background: rgba(248, 249, 247, 0.05);
     border: 1px solid rgba(248, 249, 247, 0.15);
     color: #F8F9F7;
@@ -627,28 +634,28 @@ body.page-home div.booking-modal-overlay div.booking-modal div.form-group textar
     width: 100%;
 }
 
-body.page-home div.booking-modal-overlay div.booking-modal div.form-group select option {
+div.booking-modal-overlay div.booking-modal div.form-group select option {
     background: #0f0d0e;
 }
 
-body.page-home div.booking-modal-overlay div.booking-modal div.form-group input:focus,
-body.page-home div.booking-modal-overlay div.booking-modal div.form-group select:focus,
-body.page-home div.booking-modal-overlay div.booking-modal div.form-group textarea:focus {
+div.booking-modal-overlay div.booking-modal div.form-group input:focus,
+div.booking-modal-overlay div.booking-modal div.form-group select:focus,
+div.booking-modal-overlay div.booking-modal div.form-group textarea:focus {
     border-color: rgba(248, 249, 247, 0.5);
 }
 
-body.page-home div.booking-modal-overlay div.booking-modal div.form-group textarea {
+div.booking-modal-overlay div.booking-modal div.form-group textarea {
     resize: vertical;
     min-height: 90px;
 }
 
-body.page-home div.booking-modal-overlay div.booking-modal div.form-row {
+div.booking-modal-overlay div.booking-modal div.form-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
 }
 
-body.page-home div.booking-modal-overlay div.booking-modal button.form-submit {
+div.booking-modal-overlay div.booking-modal button.form-submit {
     width: 100%;
     background: #F8F9F7;
     color: #080607;
@@ -663,7 +670,7 @@ body.page-home div.booking-modal-overlay div.booking-modal button.form-submit {
     transition: background 0.2s ease, color 0.2s ease;
 }
 
-body.page-home div.booking-modal-overlay div.booking-modal button.form-submit:hover {
+div.booking-modal-overlay div.booking-modal button.form-submit:hover {
     background: transparent;
     color: #F8F9F7;
 }
@@ -1754,7 +1761,8 @@ footer.site-footer div.footer-bottom p {
     /* Homepage Hero */
     body.page-home main section.hero {
         grid-template-columns: 1fr;
-        min-height: 85vh;
+        min-height: 100vh;
+        min-height: 100svh;
         padding: 0 5%;
     }
 
@@ -1790,7 +1798,7 @@ footer.site-footer div.footer-bottom p {
     body.page-home main section.hero div.hero-left {
         position: relative;
         z-index: 2;
-        padding: 3rem 0;
+        padding: 6.5rem 0 3rem;
         align-items: center;
         text-align: center;
     }
@@ -1954,7 +1962,7 @@ footer.site-footer div.footer-bottom p {
     }
 
     /* Modal */
-    body.page-home div.booking-modal-overlay div.booking-modal div.form-row {
+    div.booking-modal-overlay div.booking-modal div.form-row {
         grid-template-columns: 1fr;
     }
 }
@@ -1969,5 +1977,158 @@ footer.site-footer div.footer-bottom p {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 2rem;
+    }
+}
+
+
+/* ──────────────────────────────────────────────────────────
+   12. HEADER, BOOK NOW BUTTON, BOOKING MODAL EXTRAS
+   ────────────────────────────────────────────────────────── */
+
+html {
+    scroll-padding-top: 5.5rem;
+}
+
+/* Header backgrounds live on pseudo-elements: backdrop-filter on the header
+   itself would trap the position:fixed mobile drawer inside it. */
+header::before,
+header::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    transition: opacity 0.35s ease;
+}
+
+/* ::before = frosted dark glass */
+header::before {
+    background: rgba(8, 6, 7, 0.82);
+    -webkit-backdrop-filter: blur(14px) saturate(120%);
+    backdrop-filter: blur(14px) saturate(120%);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+/* ::after = soft fade from black, only while transparent over the hero */
+header::after {
+    background: linear-gradient(to bottom, rgba(8, 6, 7, 0.65), rgba(8, 6, 7, 0));
+    opacity: 0;
+}
+
+/* Home: header floats over the hero, turns to glass after scrolling */
+body.page-home header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+body.page-home header::before {
+    opacity: 0;
+}
+
+body.page-home header::after {
+    opacity: 1;
+}
+
+body.page-home header.scrolled::before {
+    opacity: 1;
+}
+
+body.page-home header.scrolled::after {
+    opacity: 0;
+}
+
+/* Book Now button (injected into the nav by script.js) */
+nav ul li.nav-book {
+    display: flex;
+    align-items: center;
+}
+
+nav ul li.nav-book button.nav-book-btn {
+    background: #F8F9F7;
+    color: #080607;
+    border: 2px solid #F8F9F7;
+    font-family: "Special Gothic Expanded One", sans-serif;
+    font-size: clamp(0.6rem, 0.9vw, 0.72rem);
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    padding: 10px 18px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background 0.25s ease, color 0.25s ease;
+}
+
+nav ul li.nav-book button.nav-book-btn:hover {
+    background: transparent;
+    color: #F8F9F7;
+}
+
+nav ul li.nav-book button.nav-book-btn:focus-visible,
+div.booking-modal-overlay div.booking-modal button:focus-visible {
+    outline: 2px solid #F8F9F7;
+    outline-offset: 3px;
+}
+
+/* Booking modal: hidden from keyboard + screen readers while closed */
+div.booking-modal-overlay {
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0s linear 0.3s;
+}
+
+div.booking-modal-overlay.open {
+    visibility: visible;
+    transition-delay: 0s;
+}
+
+div.booking-modal-overlay [hidden] {
+    display: none !important;
+}
+
+html.modal-open {
+    overflow: hidden;
+}
+
+div.booking-modal-overlay div.booking-modal input[type="date"] {
+    color-scheme: dark;
+}
+
+div.booking-modal-overlay div.booking-modal p.modal-error {
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.78rem;
+    line-height: 1.5;
+    color: #ff9b8f;
+    margin: 0.25rem 0 0;
+    min-height: 1.2em;
+}
+
+div.booking-modal-overlay div.booking-modal div.modal-success {
+    padding: 1.5rem 0 0.5rem;
+}
+
+div.booking-modal-overlay div.booking-modal div.modal-success p.modal-sub {
+    margin-bottom: 1.75rem;
+}
+
+@media (max-width: 768px) {
+    nav ul li.nav-book {
+        border-bottom: none;
+        padding-bottom: 0;
+        margin-top: 0.5rem;
+    }
+
+    nav ul li.nav-book button.nav-book-btn {
+        width: 100%;
+        padding: 14px 18px;
+        font-size: 0.7rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    header::before,
+    header::after,
+    div.booking-modal-overlay,
+    div.booking-modal-overlay div.booking-modal {
+        transition: none;
     }
 }
