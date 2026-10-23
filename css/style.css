@@ -56,7 +56,7 @@ main {
 .backdrop {
     position: fixed;
     inset: 0;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.22);
     z-index: 900;
     opacity: 0;
     pointer-events: none;
@@ -518,7 +518,8 @@ body.page-home main section.services-snapshot div.services-grid div.service-tile
 div.booking-modal-overlay {
     position: fixed;
     inset: 0;
-    background: rgba(0, 0, 0, 0.85);
+    background: rgba(0, 0, 0, 0.45);
+    -webkit-backdrop-filter: blur(12px) saturate(120%);
     z-index: 1100;
     display: flex;
     align-items: center;
@@ -535,8 +536,8 @@ div.booking-modal-overlay.open {
 }
 
 div.booking-modal-overlay div.booking-modal {
-    background: #0f0d0e;
-    border: 1px solid rgba(248, 249, 247, 0.15);
+    background: rgba(15, 13, 14, 0.82); 
+    border: 1px solid rgba(248, 249, 247, 0.12);
     width: 100%;
     max-width: 520px;
     max-height: 90vh;
@@ -673,6 +674,11 @@ div.booking-modal-overlay div.booking-modal button.form-submit {
 div.booking-modal-overlay div.booking-modal button.form-submit:hover {
     background: transparent;
     color: #F8F9F7;
+}
+
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+    div.booking-modal-overlay { background: rgba(0, 0, 0, 0.85); }
+    div.booking-modal-overlay div.booking-modal { background: #0f0d0e; }
 }
 
 /* ──────────────────────────────────────────────────────────
@@ -1701,24 +1707,48 @@ footer.site-footer div.footer-bottom p {
 
 @media (max-width: 768px) {
     /* Navigation */
+        /* Navigation — drawer */
     nav ul {
         position: fixed;
         top: 0;
         right: -100%;
-        width: 70%;
+        width: 85vw;
+        max-width: 26rem;
         height: 100vh;
-        background: #080607;
-        border-left: 2px solid rgba(248, 249, 247, 0.5);
+        height: 100svh;
+        background: transparent;
+        border-left: none;
         flex-direction: column;
-        gap: 2rem;
-        padding: 5.5rem 2rem;
-        transition: right 0.3s ease;
+        gap: 0;
+        padding: 5.5rem 0 0;
+        transition: right 0.35s ease;
         display: flex;
         z-index: 1001;
+        overflow-y: auto;
+        overscroll-behavior: contain;
+        -webkit-overflow-scrolling: touch;
     }
 
     nav ul.open {
         right: 0;
+    }
+
+    /* Glass on a pseudo-element — keeps backdrop-filter off the ul itself,
+       which would otherwise create a containing block on iOS. */
+    nav ul::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        pointer-events: none;
+        background: rgba(8, 6, 7, 0.75);
+        -webkit-backdrop-filter: blur(18px) saturate(120%);
+        backdrop-filter: blur(18px) saturate(120%);
+        border-left: 1px solid rgba(248, 249, 247, 0.12);
+    }
+
+    @supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+        nav ul::before { background: rgba(8, 6, 7, 0.94); }
     }
 
     nav ul.open .nav-label {
@@ -1728,31 +1758,45 @@ footer.site-footer div.footer-bottom p {
         letter-spacing: 0.3rem;
         opacity: 0.3;
         text-transform: uppercase;
-        margin-bottom: -0.5rem;
+        padding: 0 1.75rem 0.75rem;
     }
-
-    nav ul li a {
-        font-size: clamp(1.5rem, 4vw, 2.5rem);
-        opacity: 0.5;
-    }
-
-   nav ul li a::hover {
-      opacity: 1;
-      /* new change remove if error */
-   }
 
     nav ul li {
-        border-bottom: 1px solid rgba(248, 249, 247, 0.15);
-        padding-bottom: 1rem;
+        width: 100%;
+        border-bottom: 1px solid rgba(248, 249, 247, 0.12);
+        padding: 0;
     }
 
     nav ul li:last-child {
         border-bottom: none;
     }
 
+    nav ul li a {
+        display: block;
+        width: 100%;
+        padding: 1.05rem 1.75rem;
+        font-size: clamp(1.35rem, 5vw, 1.9rem);
+        line-height: 1.1;
+        opacity: 0.72;
+        transition: opacity 0.2s ease, background 0.2s ease;
+    }
+
+    nav ul li a:hover,
+    nav ul li a:focus-visible {
+        opacity: 1;
+        background: rgba(248, 249, 247, 0.04);
+    }
+
     nav ul li a::after {
         display: none;
     }
+
+    nav ul li a.active {
+        opacity: 1;
+        color: #F8F9F7;
+        position: relative;
+    }
+
 
     .hamburger {
         display: block;
@@ -2110,17 +2154,47 @@ div.booking-modal-overlay div.booking-modal div.modal-success p.modal-sub {
     margin-bottom: 1.75rem;
 }
 
+/* Hide the socials on Desktop */
+nav ul li.nav-meta {
+    display: none;
+}
+
 @media (max-width: 768px) {
-    nav ul li.nav-book {
+    nav ul li.nav-meta {
+        display: flex;
         border-bottom: none;
-        padding-bottom: 0;
-        margin-top: 0.5rem;
+        padding: 0 1.75rem 1.5rem;
+        flex-direction: column;
+        gap: 0.9rem;
+        width: 100%;
+    }
+
+    nav ul li.nav-book {
+        margin-top: auto;
+        border-bottom: none;
+        padding: 1rem 1.75rem 0.5rem;
     }
 
     nav ul li.nav-book button.nav-book-btn {
         width: 100%;
         padding: 14px 18px;
         font-size: 0.7rem;
+    }
+
+    nav ul li.nav-meta .nav-meta-socials {
+        display: flex;
+        gap: 1.25rem;
+        justify-content: center;
+    }
+
+    nav ul li.nav-meta .nav-meta-socials a {
+        font-size: 1.2rem;
+        opacity: 0.6;
+        transition: opacity 0.2s ease;
+    }
+
+    nav ul li.nav-meta .nav-meta-socials a:hover {
+        opacity: 1;
     }
 }
 
@@ -2194,19 +2268,25 @@ nav ul li.nav-login a.nav-login-btn:focus-visible {
     nav ul li.nav-login a.nav-login-btn {
         border: none;
         background: none;
-        padding: 0.5rem 0;
+        padding: 1.05rem 1.75rem;
         font-family: inherit;
         font-weight: inherit;
         letter-spacing: normal;
         text-transform: none;
-        font-size: clamp(1.5rem, 4vw, 2.5rem);
-        opacity: 0.5;
+        font-size: clamp(1.35rem, 5vw, 1.9rem);
+        line-height: 1.1;
+        opacity: 0.72;
+        transition: opacity 0.2s ease, background 0.2s ease;
     }
 
     nav ul li.nav-login a.nav-login-btn:hover,
     nav ul li.nav-login a.nav-login-btn.active {
-        background: none;
+        background: rgba(248, 249, 247, 0.04);
         opacity: 1;
+    }
+    
+    nav ul li.nav-login a.nav-login-btn.active::before {
+        display: none;
     }
 }
 

@@ -155,10 +155,11 @@ if (word) {
 
 const navLinks = document.querySelectorAll('nav ul li a')
 
+const here = window.location.pathname.replace(/\/index\.html$/, '/').replace(/\/$/, '')
 navLinks.forEach(link => {
-    if (link.href === window.location.href) {
-        link.classList.add('active')
-    }
+    const target = new URL(link.href, window.location.href)
+        .pathname.replace(/\/index\.html$/, '/').replace(/\/$/, '')
+    if (target === here) link.classList.add('active')
 })
 
 const hamburger = document.querySelector('.hamburger')
@@ -346,6 +347,7 @@ if (marquee) marqueeObserver.observe(marquee)
         const loginLi = document.createElement('li')
         loginLi.className = 'nav-login'
         loginLi.innerHTML = '<a href="login.html" class="nav-login-btn">Log In</a>'
+
         navList.appendChild(loginLi)
         if (/login(\.html)?$/.test(window.location.pathname)) {
             const a = loginLi.querySelector('a')
@@ -356,9 +358,24 @@ if (marquee) marqueeObserver.observe(marquee)
         const li = document.createElement('li')
         li.className = 'nav-book'
         li.innerHTML = '<button type="button" class="nav-book-btn">Book Now</button>'
+        
         navList.appendChild(li)
         bookBtn = li.querySelector('button')
+
+        // Socials + address under Book Now (mobile drawer only; CSS hides on desktop)
+        const metaLi = document.createElement('li')
+        metaLi.className = 'nav-meta'
+        metaLi.innerHTML = `
+            <div class="nav-meta-socials">
+                <a href="https://www.facebook.com/rakistattoo/" aria-label="Facebook" target="_blank" rel="noopener"><i class="bi bi-facebook"></i></a>
+                <a href="https://www.instagram.com/rakistattoo/" aria-label="Instagram" target="_blank" rel="noopener"><i class="bi bi-instagram"></i></a>
+                <a href="https://www.tiktok.com/@rakistattoo" aria-label="TikTok" target="_blank" rel="noopener"><i class="bi bi-tiktok"></i></a>
+            </div>
+        `
+        navList.appendChild(metaLi)
+
     }
+
 
     const placements = {
         ear: ['Earlobe', 'Helix', 'Auricle', 'Flat', 'Conch', 'Tragus', 'Snug', 'Rook', 'Daith', 'Forward Helix', 'Industrial', 'Tunnel (10mm)'],
