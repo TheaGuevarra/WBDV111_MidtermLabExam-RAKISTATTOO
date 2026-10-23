@@ -621,7 +621,9 @@ if (marquee) marqueeObserver.observe(marquee)
         overlay.classList.remove('open')
         overlay.setAttribute('aria-hidden', 'true')
         document.documentElement.classList.remove('modal-open')
-        if (lastFocus && lastFocus.focus) lastFocus.focus()
+        
+        // preventScroll: true stops the browser from auto-scrolling to the button
+        if (lastFocus && lastFocus.focus) lastFocus.focus({ preventScroll: true })
     }
 
     closeBtn.addEventListener('click', closeModal)
