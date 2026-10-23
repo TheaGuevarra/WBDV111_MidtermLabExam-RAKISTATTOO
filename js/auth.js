@@ -9,7 +9,6 @@
     // Random background image: swap in your own full-res paths
     const bgImages = [
         'images/full-res/logcover (1).jpeg',
-        'images/full-res/logcover (2).jpeg',
         'images/full-res/logcover (3).jpeg',
         'images/full-res/logcover (4).jpeg',
     ]
